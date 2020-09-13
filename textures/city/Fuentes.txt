@@ -1,0 +1,8 @@
+rain:
+https://opengameart.org/content/rain
+
+ground:
+https://opengameart.org/content/ground-outdoors-burned-ground-seamless-texture-with-normalmap-burnedgroundsjpg
+
+city background:
+https://opengameart.org/content/city-background-repetitive-3
