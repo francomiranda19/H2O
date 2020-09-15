@@ -10,7 +10,7 @@
 [ext_resource path="res://textures/city/background/BurnedGround_S.jpg" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 644.014, 78.4116 )
+extents = Vector2( 4560.66, 78.4116 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 139, 388.006 )
@@ -20,7 +20,7 @@ length = 0.4
 loop = true
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("RainSprite:texture")
+tracks/0/path = NodePath("RainTexture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -47,26 +47,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Monster" parent="." instance=ExtResource( 1 )]
-position = Vector2( 58.4594, 363.74 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Ground" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2( 510.578, 547.557 )
-shape = SubResource( 1 )
-
-[node name="StartWall" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2( -190.585, 298.446 )
-shape = SubResource( 2 )
-
 [node name="Ground" type="TextureRect" parent="."]
-modulate = Color( 0.270588, 0.270588, 0.270588, 1 )
+modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
 margin_left = -22.0
 margin_top = 466.0
-margin_right = 2026.0
+margin_right = 8280.0
 margin_bottom = 1831.0
 texture = ExtResource( 8 )
 stretch_mode = 2
@@ -74,12 +59,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RainSprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.427451 )
-light_mask = 0
-position = Vector2( 511.672, 218.753 )
-scale = Vector2( 4.23658, 3.34735 )
-texture = ExtResource( 7 )
+[node name="Monster" parent="." instance=ExtResource( 1 )]
+position = Vector2( 58.4594, 363.74 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="Ground" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( 3867.44, 547.557 )
+shape = SubResource( 1 )
+
+[node name="StartWall" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( -190.585, 298.446 )
+shape = SubResource( 2 )
+
+[node name="RainTexture" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.694118 )
+margin_top = -809.0
+margin_right = 8293.0
+margin_bottom = 1792.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Rain" type="AnimationPlayer" parent="."]
 anims/rain = SubResource( 3 )
