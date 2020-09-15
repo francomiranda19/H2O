@@ -14,7 +14,6 @@ func _physics_process(delta):
 	var target_vel = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"), 
 		0)
-	print(target_vel.x)
 	
 	linear_vel.x = lerp(linear_vel.x, target_vel.x * speed, 0.5)
 	
