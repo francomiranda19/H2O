@@ -2,7 +2,9 @@ extends KinematicBody2D
 
 var linear_vel = Vector2()
 var speed = 400
-var g = 800
+var g = 1200
+export var total_jumps = 2
+var actual_jump = 0
 onready var playback = $AnimationTree.get("parameters/playback")
 	
 func _physics_process(delta):
@@ -28,7 +30,6 @@ func _physics_process(delta):
 			linear_vel.x = 0
 			playback.travel("attack")
 		if Input.is_action_pressed("crouch"):
-			linear_vel.x = 0
 			playback.travel("crouch")
 		
 	if target_vel.x < 0:
