@@ -6,3 +6,6 @@ https://opengameart.org/content/ground-outdoors-burned-ground-seamless-texture-w
 
 city background:
 https://opengameart.org/content/city-background-repetitive-3
+
+stairs:
+https://cc0textures.com/view?id=Rocks011
