@@ -16,34 +16,34 @@ extents = Vector2( 4560.66, 78.4116 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 139, 388.006 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 51.1589, 20.6235 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 51.2769, 20.7796 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 839.822, 56.4795 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 51.0122, 20.4941 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 51.0566, 20.4667 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 51.062, 20.3541 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 50.6445, 19.8765 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 51.0317, 20.6687 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 110.283, 583.633 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=12]
 length = 0.4
 loop = true
 step = 0.05
@@ -87,6 +87,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Monster" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.541176, 0.513726, 0.513726, 1 )
+position = Vector2( 43.7754, 417.055 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false
 
@@ -108,43 +112,39 @@ polygon = PoolVector2Array( 3130.89, -0.0656929, 3131.22, -33.6971, 3162.07, -34
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4132.77, -145.423 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4341.15, -86.4017 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3664.17, 56.0104 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5033.12, 13.44 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5182.29, -62.3942 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5395.25, -61.3911 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5582.86, 2.37653 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5758.54, 58.1774 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="EndWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 8032.88, 325.869 )
-shape = SubResource( 12 )
-
-[node name="Monster" parent="." instance=ExtResource( 1 )]
-modulate = Color( 0.541176, 0.513726, 0.513726, 1 )
-position = Vector2( 36.7469, 416.897 )
+shape = SubResource( 11 )
 
 [node name="Stairs1Up" type="TextureRect" parent="."]
 modulate = Color( 0.337255, 0.337255, 0.337255, 1 )
@@ -249,37 +249,30 @@ texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs"]
 position = Vector2( -714.18, 1993.04 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs/Stairs"]
 position = Vector2( -723.078, 1996.08 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs/Stairs/Stairs"]
 position = Vector2( -713.531, 2015.92 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs/Stairs/Stairs/Stairs"]
 position = Vector2( -741.039, 1965.97 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs/Stairs/Stairs/Stairs/Stairs"]
 position = Vector2( -726.922, 2004 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs/Stairs/Stairs/Stairs/Stairs/Stairs"]
 position = Vector2( -762.5, 1987.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="Sprite" parent="StairsBase/Stairs/Stairs/Stairs/Stairs/Stairs/Stairs/Stairs"]
 position = Vector2( -766.188, 1948.31 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="Stairs" type="TextureRect" parent="StairsBase/Stairs/Stairs/Stairs/Stairs/Stairs/Stairs/Stairs/Stairs"]
@@ -402,4 +395,4 @@ __meta__ = {
 }
 
 [node name="Rain" type="AnimationPlayer" parent="."]
-anims/rain = SubResource( 3 )
+anims/rain = SubResource( 12 )
