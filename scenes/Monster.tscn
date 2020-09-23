@@ -15,9 +15,9 @@
 [ext_resource path="res://sprites/20/crouch/Crouch_ver_2_1.png" type="Texture" id=13]
 [ext_resource path="res://sprites/20/crouch/Crouch_ver_2_2.png" type="Texture" id=14]
 [ext_resource path="res://sprites/20/attack/Shoot.png" type="Texture" id=15]
-[ext_resource path="res://sprites/100/idle/Idle_1.png" type="Texture" id=16]
-[ext_resource path="res://sprites/100/idle/Idle_3.png" type="Texture" id=17]
-[ext_resource path="res://sprites/100/idle/Idle_2.png" type="Texture" id=18]
+[ext_resource path="res://sprites/100/idle/Idle_3.png" type="Texture" id=16]
+[ext_resource path="res://sprites/100/idle/Idle_2.png" type="Texture" id=17]
+[ext_resource path="res://sprites/100/idle/Idle_1.png" type="Texture" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 53.911
@@ -195,7 +195,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 17 ) ]
+"values": [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 16 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("CollisionShape2D:shape:radius")
@@ -207,7 +207,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 78.3485 ]
+"values": [ 66.299 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("CollisionShape2D:shape:height")
@@ -219,7 +219,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 29.1012 ]
+"values": [ 48.9767 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("CollisionShape2D:position")
@@ -231,7 +231,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -4.35168, -2.1009 ) ]
+"values": [ Vector2( 5.63985, -0.956858 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -449,7 +449,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id=9]
-animation = "attack 20"
+animation = "attack"
 
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "crouch 20"
@@ -549,12 +549,12 @@ switch_mode = 2
 "states/jump 20/node" = SubResource( 15 )
 "states/jump 20/position" = Vector2( 1060, -15 )
 "states/jump_start 20/node" = SubResource( 16 )
-"states/jump_start 20/position" = Vector2( 935, -130 )
+"states/jump_start 20/position" = Vector2( 935, -129 )
 "states/run 20/node" = SubResource( 17 )
 "states/run 20/position" = Vector2( 195, -140 )
 transitions = [ "idle 20", "run 20", SubResource( 18 ), "run 20", "idle 20", SubResource( 19 ), "idle 20", "jump_start 20", SubResource( 20 ), "run 20", "jump_start 20", SubResource( 21 ), "jump_start 20", "jump 20", SubResource( 22 ), "idle 20", "crouch_start 20", SubResource( 23 ), "run 20", "crouch_start 20", SubResource( 24 ), "crouch 20", "idle 20", SubResource( 25 ), "crouch 20", "run 20", SubResource( 26 ), "crouch_start 20", "crouch 20", SubResource( 27 ), "jump 20", "crouch_start 20", SubResource( 28 ), "jump 20", "fall 20", SubResource( 29 ), "idle 20", "fall 20", SubResource( 30 ), "run 20", "fall 20", SubResource( 31 ), "crouch 20", "fall 20", SubResource( 32 ), "fall 20", "idle 20", SubResource( 33 ), "jump 20", "attack 20", SubResource( 34 ), "run 20", "attack 20", SubResource( 35 ), "idle 20", "attack 20", SubResource( 36 ), "attack 20", "run 20", SubResource( 37 ), "attack 20", "idle 20", SubResource( 38 ), "attack 20", "fall 20", SubResource( 39 ), "attack 20", "jump 20", SubResource( 40 ), "fall 20", "attack 20", SubResource( 41 ), "attack 20", "crouch_start 20", SubResource( 42 ), "crouch 20", "crouch_start 2 20", SubResource( 43 ), "crouch_start 2 20", "attack 20", SubResource( 44 ) ]
 start_node = "idle 20"
-graph_offset = Vector2( 0, 15.6601 )
+graph_offset = Vector2( 45.0038, 240.4 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
@@ -568,8 +568,9 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.0934449, -0.572059 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
