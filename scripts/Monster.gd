@@ -30,7 +30,8 @@ func _physics_process(delta):
 	linear_vel.y += g * delta
 	linear_vel = move_and_slide(linear_vel, Vector2.UP)
 	var on_floor = is_on_floor()
-
+	
+	print(on_floor)
 	var target_vel = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"), 
 		0)
@@ -40,8 +41,8 @@ func _physics_process(delta):
 	var attacking = Input.is_action_pressed("attack")
 	var jumping = Input.is_action_just_pressed("jump")
 	
-	if attacking and on_floor: 
-		linear_vel.x= 0
+	if attacking: 
+		linear_vel.x = 0
 	if jumping and (on_floor or can_double_jump):
 		if can_double_jump:
 			can_double_jump = false
