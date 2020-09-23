@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Textures/Suelometalico.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Chip.png" type="Texture" id=2]
 [ext_resource path="res://Scene/H2O.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/Monster.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4212.26, 400 )
@@ -23,7 +24,11 @@ __meta__ = {
 }
 
 [node name="H2O" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 65.9088, 427.162 )
+
+[node name="Monster" parent="." instance=ExtResource( 4 )]
+position = Vector2( 134.469, 465.726 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 142.175, 256.877 )
