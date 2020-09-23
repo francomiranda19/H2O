@@ -40,7 +40,7 @@ func _physics_process(delta):
 	var attacking = Input.is_action_pressed("attack")
 	var jumping = Input.is_action_just_pressed("jump")
 	
-	if attacking: 
+	if attacking and on_floor: 
 		linear_vel.x = 0
 	if jumping and (on_floor or can_double_jump):
 		if can_double_jump:
