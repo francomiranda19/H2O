@@ -31,7 +31,6 @@ func _physics_process(delta):
 	linear_vel = move_and_slide(linear_vel, Vector2.UP)
 	var on_floor = is_on_floor()
 	
-	print(on_floor)
 	var target_vel = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"), 
 		0)
