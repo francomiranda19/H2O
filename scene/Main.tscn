@@ -1,15 +1,25 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Textures/Suelometalico.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Chip.png" type="Texture" id=2]
-[ext_resource path="res://Scene/H2O.tscn" type="PackedScene" id=3]
+[ext_resource path="res://textures/Metal.png" type="Texture" id=3]
 [ext_resource path="res://scene/Monster.tscn" type="PackedScene" id=4]
+[ext_resource path="res://textures/SolarPanel.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4212.26, 400 )
+extents = Vector2( 4212.26, 395.456 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 563.341, 281.128 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 295.642, 293.132 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 296.163, 119.853 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 403.545, 83.4983 )
 
 [node name="Main" type="Node2D"]
 
@@ -23,10 +33,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="H2O" parent="." instance=ExtResource( 3 )]
-visible = false
-position = Vector2( 65.9088, 427.162 )
-
 [node name="Monster" parent="." instance=ExtResource( 4 )]
 position = Vector2( 134.469, 465.726 )
 
@@ -34,8 +40,7 @@ position = Vector2( 134.469, 465.726 )
 position = Vector2( 142.175, 256.877 )
 
 [node name="Ground2" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2( 245.132, 663.579 )
+position = Vector2( 359.296, 665.957 )
 shape = SubResource( 1 )
 
 [node name="Startwall" type="CollisionShape2D" parent="StaticBody2D"]
@@ -43,12 +48,60 @@ visible = false
 position = Vector2( -760.17, -57.181 )
 shape = SubResource( 2 )
 
-[node name="Ground" type="TextureRect" parent="."]
+[node name="Wall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 643.183, -79.5094 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1309.51, 266.73 )
+shape = SubResource( 3 )
+
+[node name="Wall5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1239.36, -79.9005 )
+shape = SubResource( 5 )
+
+[node name="Wall6" type="TextureRect" parent="StaticBody2D"]
+margin_left = 822.0
+margin_top = -160.0
+margin_right = 11089.0
+margin_bottom = 1888.0
+rect_scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 5 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall4" type="TextureRect" parent="StaticBody2D"]
+margin_left = 350.713
+margin_top = -373.438
+margin_right = 3298.71
+margin_bottom = 2542.56
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall3" type="TextureRect" parent="StaticBody2D"]
+margin_left = 1015.06
+margin_top = 145.57
+margin_right = 3963.06
+margin_bottom = 2193.57
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="TextureRect" parent="StaticBody2D"]
 anchor_bottom = 1.0
-margin_left = -1.0
-margin_top = 525.0
-margin_right = 6841.0
-margin_bottom = 2573.0
+margin_left = -143.175
+margin_top = 268.123
+margin_right = 6698.83
+margin_bottom = 2316.12
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 stretch_mode = 2
