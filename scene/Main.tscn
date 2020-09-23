@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Textures/Suelometalico.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Chip.png" type="Texture" id=2]
+[ext_resource path="res://Scene/H2O.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4212.26, 400 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 563.341, 281.128 )
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = -544.286
+margin_top = -272.143
+margin_right = 1503.71
+margin_bottom = 1775.86
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="H2O" parent="." instance=ExtResource( 3 )]
+position = Vector2( 65.9088, 427.162 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 142.175, 256.877 )
+
+[node name="Ground2" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( 245.132, 663.579 )
+shape = SubResource( 1 )
+
+[node name="Startwall" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( -760.17, -57.181 )
+shape = SubResource( 2 )
+
+[node name="Ground" type="TextureRect" parent="."]
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 525.0
+margin_right = 6841.0
+margin_bottom = 2573.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
