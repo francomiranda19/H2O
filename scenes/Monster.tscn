@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://sprites/20/idle/Idle_1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/20/idle/Idle_2.png" type="Texture" id=2]
@@ -15,13 +15,16 @@
 [ext_resource path="res://sprites/20/crouch/Crouch_ver_2_1.png" type="Texture" id=13]
 [ext_resource path="res://sprites/20/crouch/Crouch_ver_2_2.png" type="Texture" id=14]
 [ext_resource path="res://sprites/20/attack/Shoot.png" type="Texture" id=15]
+[ext_resource path="res://sprites/100/idle/Idle_1.png" type="Texture" id=16]
+[ext_resource path="res://sprites/100/idle/Idle_3.png" type="Texture" id=17]
+[ext_resource path="res://sprites/100/idle/Idle_2.png" type="Texture" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 53.911
-height = 51.7981
+radius = 78.3485
+height = 29.1012
 
 [sub_resource type="Animation" id=2]
-resource_name = "attack"
+resource_name = "attack 20"
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -74,7 +77,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "crouch"
+resource_name = "crouch 20"
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -127,6 +130,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=4]
+resource_name = "crouch_start 20"
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -177,7 +181,61 @@ tracks/3/keys = {
 "values": [ Vector2( 3.51795, 13.3506 ) ]
 }
 
+[sub_resource type="Animation" id=48]
+resource_name = "idle 100"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 17 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:shape:radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 78.3485 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:shape:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 29.1012 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.35168, -2.1009 ) ]
+}
+
 [sub_resource type="Animation" id=5]
+resource_name = "idle 20"
 length = 0.8
 loop = true
 step = 0.05
@@ -231,6 +289,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=6]
+resource_name = "jump 20"
 length = 0.1
 loop = true
 step = 0.05
@@ -284,6 +343,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=7]
+resource_name = "jump_start 20"
 length = 0.1
 step = 0.05
 tracks/0/type = "value"
@@ -336,6 +396,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=8]
+resource_name = "run 20"
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -388,31 +449,31 @@ tracks/3/keys = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id=9]
-animation = "attack"
+animation = "attack 20"
 
 [sub_resource type="AnimationNodeAnimation" id=10]
-animation = "crouch"
+animation = "crouch 20"
 
 [sub_resource type="AnimationNodeAnimation" id=11]
-animation = "crouch_start"
+animation = "crouch_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=12]
-animation = "crouch_start"
+animation = "crouch_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=13]
-animation = "jump"
+animation = "jump 20"
 
 [sub_resource type="AnimationNodeAnimation" id=14]
-animation = "idle"
+animation = "idle 20"
 
 [sub_resource type="AnimationNodeAnimation" id=15]
-animation = "jump"
+animation = "jump 20"
 
 [sub_resource type="AnimationNodeAnimation" id=16]
-animation = "jump_start"
+animation = "jump_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=17]
-animation = "run"
+animation = "run 20"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
@@ -482,7 +543,7 @@ switch_mode = 2
 "states/crouch_start 20/node" = SubResource( 12 )
 "states/crouch_start 20/position" = Vector2( 142, 299 )
 "states/fall 20/node" = SubResource( 13 )
-"states/fall 20/position" = Vector2( 1152, 118.524 )
+"states/fall 20/position" = Vector2( 1153, 118.524 )
 "states/idle 20/node" = SubResource( 14 )
 "states/idle 20/position" = Vector2( 63, 36 )
 "states/jump 20/node" = SubResource( 15 )
@@ -493,7 +554,7 @@ switch_mode = 2
 "states/run 20/position" = Vector2( 195, -140 )
 transitions = [ "idle 20", "run 20", SubResource( 18 ), "run 20", "idle 20", SubResource( 19 ), "idle 20", "jump_start 20", SubResource( 20 ), "run 20", "jump_start 20", SubResource( 21 ), "jump_start 20", "jump 20", SubResource( 22 ), "idle 20", "crouch_start 20", SubResource( 23 ), "run 20", "crouch_start 20", SubResource( 24 ), "crouch 20", "idle 20", SubResource( 25 ), "crouch 20", "run 20", SubResource( 26 ), "crouch_start 20", "crouch 20", SubResource( 27 ), "jump 20", "crouch_start 20", SubResource( 28 ), "jump 20", "fall 20", SubResource( 29 ), "idle 20", "fall 20", SubResource( 30 ), "run 20", "fall 20", SubResource( 31 ), "crouch 20", "fall 20", SubResource( 32 ), "fall 20", "idle 20", SubResource( 33 ), "jump 20", "attack 20", SubResource( 34 ), "run 20", "attack 20", SubResource( 35 ), "idle 20", "attack 20", SubResource( 36 ), "attack 20", "run 20", SubResource( 37 ), "attack 20", "idle 20", SubResource( 38 ), "attack 20", "fall 20", SubResource( 39 ), "attack 20", "jump 20", SubResource( 40 ), "fall 20", "attack 20", SubResource( 41 ), "attack 20", "crouch_start 20", SubResource( 42 ), "crouch 20", "crouch_start 2 20", SubResource( 43 ), "crouch_start 2 20", "attack 20", SubResource( 44 ) ]
 start_node = "idle 20"
-graph_offset = Vector2( 0, -194.548 )
+graph_offset = Vector2( 0, 15.6601 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
@@ -509,26 +570,25 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0934449, -0.572059 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+texture = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -1.85168, 15.8991 )
+position = Vector2( -4.35168, -2.1009 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/attack = SubResource( 2 )
-anims/crouch = SubResource( 3 )
-anims/crouch_start = SubResource( 4 )
-anims/idle = SubResource( 5 )
-anims/jump = SubResource( 6 )
-anims/jump_start = SubResource( 7 )
-anims/run = SubResource( 8 )
+"anims/attack 20" = SubResource( 2 )
+"anims/crouch 20" = SubResource( 3 )
+"anims/crouch_start 20" = SubResource( 4 )
+"anims/idle 100" = SubResource( 48 )
+"anims/idle 20" = SubResource( 5 )
+"anims/jump 20" = SubResource( 6 )
+"anims/jump_start 20" = SubResource( 7 )
+"anims/run 20" = SubResource( 8 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 46 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
