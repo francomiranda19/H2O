@@ -42,7 +42,7 @@ func _physics_process(delta):
 	
 	if attacking and on_floor: 
 		linear_vel.x = 0
-	if jumping and (on_floor or can_double_jump):
+	if jumping and (on_floor or can_double_jump) and in_area == 0:
 		if can_double_jump:
 			can_double_jump = false
 		linear_vel.y = -speed
@@ -65,7 +65,7 @@ func _physics_process(delta):
 		else:
 			playback.travel("jump 20")
 	
-	if attacking:
+	if attacking and in_area == 0:
 		playback.travel("attack 20")
 		
 	if target_vel.x < 0:
