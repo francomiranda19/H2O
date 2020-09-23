@@ -449,7 +449,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id=9]
-animation = "attack"
+animation = "attack 20"
 
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "crouch 20"
@@ -554,7 +554,7 @@ switch_mode = 2
 "states/run 20/position" = Vector2( 195, -140 )
 transitions = [ "idle 20", "run 20", SubResource( 18 ), "run 20", "idle 20", SubResource( 19 ), "idle 20", "jump_start 20", SubResource( 20 ), "run 20", "jump_start 20", SubResource( 21 ), "jump_start 20", "jump 20", SubResource( 22 ), "idle 20", "crouch_start 20", SubResource( 23 ), "run 20", "crouch_start 20", SubResource( 24 ), "crouch 20", "idle 20", SubResource( 25 ), "crouch 20", "run 20", SubResource( 26 ), "crouch_start 20", "crouch 20", SubResource( 27 ), "jump 20", "crouch_start 20", SubResource( 28 ), "jump 20", "fall 20", SubResource( 29 ), "idle 20", "fall 20", SubResource( 30 ), "run 20", "fall 20", SubResource( 31 ), "crouch 20", "fall 20", SubResource( 32 ), "fall 20", "idle 20", SubResource( 33 ), "jump 20", "attack 20", SubResource( 34 ), "run 20", "attack 20", SubResource( 35 ), "idle 20", "attack 20", SubResource( 36 ), "attack 20", "run 20", SubResource( 37 ), "attack 20", "idle 20", SubResource( 38 ), "attack 20", "fall 20", SubResource( 39 ), "attack 20", "jump 20", SubResource( 40 ), "fall 20", "attack 20", SubResource( 41 ), "attack 20", "crouch_start 20", SubResource( 42 ), "crouch 20", "crouch_start 2 20", SubResource( 43 ), "crouch_start 2 20", "attack 20", SubResource( 44 ) ]
 start_node = "idle 20"
-graph_offset = Vector2( 45.0038, 240.4 )
+graph_offset = Vector2( -173.63, -46.576 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
@@ -570,7 +570,7 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0934449, -0.572059 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
