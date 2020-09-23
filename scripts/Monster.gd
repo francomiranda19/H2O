@@ -50,23 +50,23 @@ func _physics_process(delta):
 	if on_floor:
 		can_double_jump = true
 		if linear_vel.length_squared() > 10:
-			playback.travel("run")
+			playback.travel("run 20")
 		if linear_vel.length_squared() <= 10:
-			playback.travel("idle")
+			playback.travel("idle 20")
 		var crouch_pressed = Input.is_action_pressed("crouch")
 		if crouching or crouch_pressed:
 			crouching = true
-			playback.travel("crouch")
+			playback.travel("crouch 20")
 		if crouching and not crouch_pressed:
 			check_crouch()
 	else:
 		if linear_vel.y > 0:
-			playback.travel("fall")
+			playback.travel("fall 20")
 		else:
-			playback.travel("jump")
+			playback.travel("jump 20")
 	
 	if attacking:
-		playback.travel("attack")
+		playback.travel("attack 20")
 		
 	if target_vel.x < 0:
 		$Sprite.flip_h = true

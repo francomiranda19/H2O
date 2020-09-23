@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shoot.png-05ae4f0a62d86b4a4112445b9d244d72.stex"
+path="res://.import/Run_4.png-91debc5b3dd3e6d0df4c17bb916535dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/attack/Shoot.png"
-dest_files=[ "res://.import/Shoot.png-05ae4f0a62d86b4a4112445b9d244d72.stex" ]
+source_file="res://sprites/20/run/Run_4.png"
+dest_files=[ "res://.import/Run_4.png-91debc5b3dd3e6d0df4c17bb916535dd.stex" ]
 
 [params]
 

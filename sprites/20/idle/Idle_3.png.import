@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Crouch_ver_2_1.png-36a43b34bc8abbb531f4d5ff137f2e8c.stex"
+path="res://.import/Idle_3.png-aa04bb1013e14d404e97076f47aa5250.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/crouch/Crouch_ver_2_1.png"
-dest_files=[ "res://.import/Crouch_ver_2_1.png-36a43b34bc8abbb531f4d5ff137f2e8c.stex" ]
+source_file="res://sprites/20/idle/Idle_3.png"
+dest_files=[ "res://.import/Idle_3.png-aa04bb1013e14d404e97076f47aa5250.stex" ]
 
 [params]
 

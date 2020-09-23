@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Run_4.png-96a6cb07cca5e9d89230fe3232879153.stex"
+path="res://.import/Crouch_ver_2_2.png-55fcaddfee4a9a61ee0acb0b3dd9f546.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/run/Run_4.png"
-dest_files=[ "res://.import/Run_4.png-96a6cb07cca5e9d89230fe3232879153.stex" ]
+source_file="res://sprites/20/crouch/Crouch_ver_2_2.png"
+dest_files=[ "res://.import/Crouch_ver_2_2.png-55fcaddfee4a9a61ee0acb0b3dd9f546.stex" ]
 
 [params]
 

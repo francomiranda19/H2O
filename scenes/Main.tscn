@@ -89,7 +89,7 @@ __meta__ = {
 
 [node name="Monster" parent="." instance=ExtResource( 1 )]
 modulate = Color( 0.541176, 0.513726, 0.513726, 1 )
-position = Vector2( 43.7754, 417.055 )
+position = Vector2( 4226.92, -76.3971 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false
@@ -387,7 +387,7 @@ margin_left = -2.40137
 margin_top = -2777.0
 margin_right = 8290.6
 margin_bottom = 1789.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 stretch_mode = 2
 __meta__ = {
