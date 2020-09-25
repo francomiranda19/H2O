@@ -10,37 +10,37 @@
 [ext_resource path="res://textures/city/background/BurnedGround_S.jpg" type="Texture" id=8]
 [ext_resource path="res://textures/city/background/Stairs.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 139, 388.006 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 51.1589, 20.6235 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 51.2769, 20.7796 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 839.822, 56.4795 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 51.0122, 20.4941 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 51.0566, 20.4667 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 51.062, 20.3541 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 50.6445, 19.8765 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 51.0317, 20.6687 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 110.283, 583.633 )
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=11]
 length = 0.4
 loop = true
 step = 0.05
@@ -85,8 +85,7 @@ __meta__ = {
 }
 
 [node name="Monster" parent="." instance=ExtResource( 1 )]
-modulate = Color( 0.541176, 0.513726, 0.513726, 1 )
-position = Vector2( 43.0397, 415.002 )
+position = Vector2( 41.6243, 417.084 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false
@@ -94,7 +93,7 @@ visible = false
 [node name="StartWall" type="CollisionShape2D" parent="StaticBody2D"]
 visible = false
 position = Vector2( -150.222, 298.446 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Stairs" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 1241.6, 465.709, 1241.84, 424.651, 1272.75, 424.415, 1272.99, 385.716, 1302.96, 385.716, 1303.25, 346.25, 1332, 346, 1332.63, 306.226, 1361.82, 305.945, 1362.01, 266.808, 1390.49, 266.668, 1390.67, 226.622, 1419.25, 226.424, 1419.34, 186.361, 1447.81, 186.361, 1447.81, 146.656, 1480.58, 146.656, 1480.76, 105.603, 5924.05, 105.707, 5964.84, 105.582, 5965.22, 145.088, 6024.58, 146.2, 6025.03, 185.434, 6086.48, 186.005, 6086.29, 224.212, 6149.22, 224.774, 6149.97, 264.009, 6209.62, 263.546, 6209.99, 302.689, 6267.87, 303.251, 6267.87, 342.956, 6322.99, 342.769, 6323.54, 381.801, 6381.15, 382.222, 6381.78, 422.585, 6440.85, 423.426, 6441.44, 466.154 )
@@ -104,39 +103,39 @@ polygon = PoolVector2Array( 3130.89, -0.0656929, 3131.22, -33.6971, 3162.07, -34
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4132.77, -145.423 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4341.15, -86.4017 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3664.17, 56.0104 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5033.12, 13.44 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5182.29, -62.3942 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5395.25, -61.3911 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5582.86, 2.37653 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5758.54, 58.1774 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="EndWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 8032.88, 325.869 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="Ground" type="CollisionPolygon2D" parent="StaticBody2D"]
 visible = false
@@ -391,4 +390,4 @@ __meta__ = {
 }
 
 [node name="Rain" type="AnimationPlayer" parent="."]
-anims/rain = SubResource( 12 )
+anims/rain = SubResource( 11 )

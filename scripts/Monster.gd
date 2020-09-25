@@ -6,6 +6,7 @@ var g = 1200
 var can_double_jump = true
 var crouching = false
 var in_area = 0
+var facing_right = true
 
 onready var playback = $AnimationTree.get("parameters/playback")
 
@@ -68,7 +69,9 @@ func _physics_process(delta):
 	if attacking and in_area == 0:
 		playback.travel("attack 20")
 		
-	if target_vel.x < 0:
-		$Sprite.flip_h = true
-	if target_vel.x > 0:
-		$Sprite.flip_h = false
+	if facing_right and target_vel.x < 0:
+		$Sprite.scale.x = -$Sprite.scale.x
+		facing_right = false
+	if not facing_right and target_vel.x > 0:
+		$Sprite.scale.x = -$Sprite.scale.x
+		facing_right = true
