@@ -8,6 +8,8 @@ var crouching = false
 var in_area = 0
 var facing_right = true
 
+var Bullet = preload("res://scenes/Bullet.tscn")
+
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func check_crouch():
@@ -71,7 +73,15 @@ func _physics_process(delta):
 		
 	if facing_right and target_vel.x < 0:
 		$Sprite.scale.x = -$Sprite.scale.x
+		$Bullet.position.x = -$Bullet.position.x
 		facing_right = false
 	if not facing_right and target_vel.x > 0:
 		$Sprite.scale.x = -$Sprite.scale.x
+		$Bullet.position.x = -$Bullet.position.x
 		facing_right = true
+		
+func fire():
+	var bullet = Bullet.instance()
+	get_parent().add_child(bullet)
+	bullet.rotation = 0 if facing_right else PI
+	bullet.global_position = $Bullet.global_position
