@@ -40,10 +40,11 @@ func _physics_process(delta):
 	
 	linear_vel.x = lerp(linear_vel.x, target_vel.x * speed, 0.5)
 	
-	var attacking = Input.is_action_pressed("attack")
+	var attacking_press = Input.is_action_pressed("attack")
+	var attacking_released = Input.is_action_just_released("attack")
 	var jumping = Input.is_action_just_pressed("jump")
 	
-	if attacking and on_floor: 
+	if attacking_press and on_floor: 
 		linear_vel.x = 0
 	if jumping and (on_floor or can_double_jump) and in_area == 0:
 		if can_double_jump:
@@ -67,9 +68,12 @@ func _physics_process(delta):
 			playback.travel("fall 20")
 		else:
 			playback.travel("jump 20")
-	
-	if attacking and in_area == 0:
-		playback.travel("attack 20")
+			
+	if in_area == 0:
+		if attacking_press:
+			playback.travel("attack_start 20")
+		if attacking_released:
+			playback.travel("attack 20")
 		
 	if facing_right and target_vel.x < 0:
 		$Sprite.scale.x = -$Sprite.scale.x
