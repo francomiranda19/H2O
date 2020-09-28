@@ -31,19 +31,18 @@ func _physics_process(delta):
 	linear_vel = move_and_slide(linear_vel, Vector2.UP)
 	var on_floor = is_on_floor()
 	
-	print(on_floor)
 	var target_vel = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"), 
 		0)
 	
 	linear_vel.x = lerp(linear_vel.x, target_vel.x * speed, 0.5)
 	
-	var attacking = Input.is_action_pressed("attack")
-	var jumping = Input.is_action_just_pressed("jump")
+	var attacking = Input.is_action_pressed("attack") or Input.is_joy_button_pressed(0,2)
+	var jumping = Input.is_action_just_pressed("jump") or Input.is_joy_button_pressed(0,0)
 	
 	if attacking: 
 		linear_vel.x = 0
-	if jumping and (on_floor or can_double_jump):
+	if jumping and in_area==0 and (on_floor or can_double_jump):
 		if can_double_jump:
 			can_double_jump = false
 		linear_vel.y = -speed
@@ -54,7 +53,7 @@ func _physics_process(delta):
 			playback.travel("run")
 		if linear_vel.length_squared() <= 10:
 			playback.travel("idle")
-		var crouch_pressed = Input.is_action_pressed("crouch")
+		var crouch_pressed = Input.is_action_pressed("crouch") or Input.is_joy_button_pressed(0,13)
 		if crouching or crouch_pressed:
 			crouching = true
 			playback.travel("crouch")
@@ -66,7 +65,7 @@ func _physics_process(delta):
 		else:
 			playback.travel("jump")
 	
-	if attacking:
+	if attacking and in_area==0:
 		playback.travel("attack")
 		
 	if target_vel.x < 0:
