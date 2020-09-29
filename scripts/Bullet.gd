@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 500
+var speed = 700
 
 func _ready():
 	$VisibilityNotifier2D.connect("screen_exited", self, "queue_free")
