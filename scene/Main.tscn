@@ -35,9 +35,9 @@ extents = Vector2( 1183.47, 2540.16 )
 
 [node name="Background" type="TextureRect" parent="."]
 margin_left = -544.0
-margin_top = -2596.0
+margin_top = -2538.92
 margin_right = 9655.0
-margin_bottom = 1776.0
+margin_bottom = 1833.08
 texture = ExtResource( 2 )
 stretch_mode = 2
 __meta__ = {
@@ -227,10 +227,10 @@ __meta__ = {
 [node name="Ground" type="TextureRect" parent="StaticBody2D"]
 modulate = Color( 0.890018, 0.311554, 0.972656, 1 )
 anchor_bottom = 1.0
-margin_left = -143.175
-margin_top = 268.123
-margin_right = 6698.83
-margin_bottom = 2316.12
+margin_left = -399.0
+margin_top = 268.0
+margin_right = 4482.0
+margin_bottom = 2316.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 stretch_mode = 2
@@ -239,4 +239,6 @@ __meta__ = {
 }
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -686.675, 270.379, 4571.48, 271.221, 4571.54, 290.96 )
+position = Vector2( -860.398, -0.000183106 )
+scale = Vector2( 0.619989, 1 )
+polygon = PoolVector2Array( -686.675, 270.379, 4680.72, 269.979, 4680.72, 295.205 )
