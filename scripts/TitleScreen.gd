@@ -6,9 +6,11 @@ func _ready():
 	$Panel/VBoxContainer/Exit.connect("pressed",self,"on_Exit_pressed")
 	
 func on_Start_pressed():
+	$Click.play()
 	LevelManager.next()
 	
 func on_Exit_pressed():
+	$Click.play()
 	get_tree().quit()
 
 
