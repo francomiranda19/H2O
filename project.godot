@@ -16,13 +16,21 @@ _global_script_class_icons={
 [application]
 
 config/name="H20"
-run/main_scene="res://scenes/Main.tscn"
+run/main_scene="res://scenes/TitleScreen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+LevelManager="*res://scripts/LevelManager.gd"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
+window/size/test_width=1080
+window/size/test_height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [importer_defaults]
 

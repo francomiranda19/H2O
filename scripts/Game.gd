@@ -1,8 +1,8 @@
 extends Node2D
 
 var Levels = [
-	preload("res://scene/TitleScreen.tscn"),
-	preload("res://scene/Main.tscn")]
+	preload("res://scenes/TitleScreen.tscn"),
+	preload("res://scenes/Main.tscn")]
 
 var current_level = 0
 var current_world: Node = null
