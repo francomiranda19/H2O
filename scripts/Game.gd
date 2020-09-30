@@ -9,6 +9,8 @@ var current_world: Node = null
 var loading = false
 
 func next():
+	if current_level + 1 >= Levels.size():
+		return
 	loading = true
 	$CanvasLayer/FadeInOut.fade_in()
 
