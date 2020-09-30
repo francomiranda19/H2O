@@ -1,0 +1,30 @@
+extends Node2D
+
+var Levels = [
+	preload("res://scene/TitleScreen.tscn"),
+	preload("res://scene/Main.tscn")]
+
+var current_level = 0
+var current_world: Node = null
+var loading = false
+
+func next():
+	loading = true
+	$CanvasLayer/FadeInOut.fade_in()
+
+func _ready():
+	$CanvasLayer/FadeInOut.connect("faded", self, "on_faded")
+	current_world = Levels[0].instance()
+	$World.add_child(current_world)
+	
+func on_faded():
+	if loading:
+		$World.remove_child(current_world)
+		current_world.queue_free()
+		current_level += 1
+		current_world = Levels[current_level].instance()
+		$World.add_child(current_world)
+		loading = false
+		$CanvasLayer/FadeInOut.fade_out()
+	
+	
