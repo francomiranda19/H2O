@@ -12,6 +12,3 @@ func fade_in():
 	
 func fade_out():
 	$AnimationPlayer.play("FadeOut")
-	
-
-
