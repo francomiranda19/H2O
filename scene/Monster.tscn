@@ -520,7 +520,7 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0934449, -0.572059 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -546,7 +546,7 @@ parameters/playback = SubResource( 50 )
 position = Vector2( 573.658, -191.066 )
 current = true
 limit_left = 0
-limit_right = 7830
+limit_right = 33000
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
