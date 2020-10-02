@@ -3,13 +3,13 @@ extends KinematicBody2D
 var linear_vel = Vector2()
 var speed = 400
 var g = 1200
+
 var can_double_jump = true
 var crouching = false
 var in_area = 0
 var facing_right = true
 
 var Bullet = preload("res://scenes/Bullet.tscn")
-
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func check_crouch():

@@ -579,11 +579,13 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=39]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+switch_mode = 2
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=42]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=43]
 
@@ -602,6 +604,7 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=50]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=51]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=52]
 switch_mode = 2
@@ -621,10 +624,7 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=57]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=58]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id=59]
+[sub_resource type="AnimationNodeStateMachine" id=58]
 "states/attack 20/node" = SubResource( 11 )
 "states/attack 20/position" = Vector2( 935, 429 )
 "states/attack_start 20/node" = SubResource( 12 )
@@ -645,13 +645,13 @@ switch_mode = 2
 "states/jump_start 20/position" = Vector2( 935, -129 )
 "states/run 20/node" = SubResource( 20 )
 "states/run 20/position" = Vector2( 195, -140 )
-transitions = [ "idle 20", "run 20", SubResource( 21 ), "run 20", "idle 20", SubResource( 22 ), "idle 20", "jump_start 20", SubResource( 23 ), "run 20", "jump_start 20", SubResource( 24 ), "jump_start 20", "jump 20", SubResource( 25 ), "idle 20", "crouch_start 20", SubResource( 26 ), "run 20", "crouch_start 20", SubResource( 27 ), "crouch 20", "run 20", SubResource( 28 ), "crouch_start 20", "crouch 20", SubResource( 29 ), "jump 20", "crouch_start 20", SubResource( 30 ), "jump 20", "fall 20", SubResource( 31 ), "idle 20", "fall 20", SubResource( 32 ), "run 20", "fall 20", SubResource( 33 ), "crouch 20", "fall 20", SubResource( 34 ), "fall 20", "idle 20", SubResource( 35 ), "crouch 20", "crouch_start 2 20", SubResource( 36 ), "fall 20", "run 20", SubResource( 37 ), "crouch_start 2 20", "idle 20", SubResource( 38 ), "fall 20", "jump 20", SubResource( 39 ), "crouch_start 2 20", "run 20", SubResource( 41 ), "crouch_start 2 20", "jump 20", SubResource( 42 ), "fall 20", "attack_start 20", SubResource( 43 ), "jump 20", "attack_start 20", SubResource( 44 ), "run 20", "attack_start 20", SubResource( 45 ), "idle 20", "attack_start 20", SubResource( 46 ), "attack_start 20", "fall 20", SubResource( 47 ), "attack_start 20", "jump 20", SubResource( 48 ), "attack_start 20", "run 20", SubResource( 49 ), "attack_start 20", "idle 20", SubResource( 50 ), "attack_start 20", "crouch_start 20", SubResource( 51 ), "crouch_start 2 20", "attack_start 20", SubResource( 52 ), "attack 20", "idle 20", SubResource( 53 ), "attack 20", "run 20", SubResource( 54 ), "attack 20", "jump 20", SubResource( 55 ), "attack 20", "crouch_start 20", SubResource( 56 ), "attack_start 20", "attack 20", SubResource( 57 ), "attack 20", "fall 20", SubResource( 58 ) ]
+transitions = [ "idle 20", "run 20", SubResource( 21 ), "run 20", "idle 20", SubResource( 22 ), "idle 20", "jump_start 20", SubResource( 23 ), "run 20", "jump_start 20", SubResource( 24 ), "jump_start 20", "jump 20", SubResource( 25 ), "idle 20", "crouch_start 20", SubResource( 26 ), "run 20", "crouch_start 20", SubResource( 27 ), "crouch 20", "run 20", SubResource( 28 ), "crouch_start 20", "crouch 20", SubResource( 29 ), "jump 20", "crouch_start 20", SubResource( 30 ), "jump 20", "fall 20", SubResource( 31 ), "idle 20", "fall 20", SubResource( 32 ), "run 20", "fall 20", SubResource( 33 ), "crouch 20", "fall 20", SubResource( 34 ), "fall 20", "idle 20", SubResource( 35 ), "crouch 20", "crouch_start 2 20", SubResource( 36 ), "fall 20", "run 20", SubResource( 37 ), "crouch_start 2 20", "idle 20", SubResource( 38 ), "fall 20", "jump 20", SubResource( 39 ), "crouch_start 2 20", "run 20", SubResource( 40 ), "crouch_start 2 20", "jump 20", SubResource( 41 ), "fall 20", "attack_start 20", SubResource( 42 ), "jump 20", "attack_start 20", SubResource( 43 ), "run 20", "attack_start 20", SubResource( 44 ), "idle 20", "attack_start 20", SubResource( 45 ), "attack_start 20", "fall 20", SubResource( 46 ), "attack_start 20", "jump 20", SubResource( 47 ), "attack_start 20", "run 20", SubResource( 48 ), "attack_start 20", "idle 20", SubResource( 49 ), "attack_start 20", "crouch_start 20", SubResource( 50 ), "crouch_start 2 20", "attack_start 20", SubResource( 51 ), "attack 20", "idle 20", SubResource( 52 ), "attack 20", "run 20", SubResource( 53 ), "attack 20", "jump 20", SubResource( 54 ), "attack 20", "crouch_start 20", SubResource( 55 ), "attack_start 20", "attack 20", SubResource( 56 ), "attack 20", "fall 20", SubResource( 57 ) ]
 start_node = "idle 20"
 graph_offset = Vector2( -67.3093, -20.481 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=60]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=59]
 
-[sub_resource type="RectangleShape2D" id=61]
+[sub_resource type="RectangleShape2D" id=60]
 extents = Vector2( 48.316, 25.2952 )
 
 [node name="Monster" type="KinematicBody2D" groups=[
@@ -663,7 +663,7 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0934449, -0.572059 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -682,10 +682,10 @@ shape = SubResource( 1 )
 "anims/run 20" = SubResource( 10 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 59 )
+tree_root = SubResource( 58 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 60 )
+parameters/playback = SubResource( 59 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1170.89, -534.219 )
@@ -698,7 +698,7 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.523, -31.408 )
-shape = SubResource( 61 )
+shape = SubResource( 60 )
 
 [node name="Bullet" type="Position2D" parent="."]
 position = Vector2( 65.6296, 50.5413 )

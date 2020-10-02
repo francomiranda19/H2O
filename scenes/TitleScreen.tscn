@@ -113,4 +113,3 @@ autoplay = true
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -10.0
-pitch_scale = 3.0
