@@ -53,10 +53,7 @@ __meta__ = {
 [node name="TextureRect2" type="TextureRect" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 0.993
-margin_left = 0.51416
-margin_top = -5.99323
-margin_right = 0.51416
-margin_bottom = 1.56677
+margin_bottom = 7.56006
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
