@@ -9,8 +9,14 @@ var crouching = false
 var in_area = 0
 var facing_right = true
 
+var health = 100 setget set_health
+
 var Bullet = preload("res://scenes/Bullet.tscn")
 onready var playback = $AnimationTree.get("parameters/playback")
+
+func set_health(value):
+	health = clamp(value, 0, 100)
+	$CanvasLayer/HealthBar.value = value
 
 func check_crouch():
 	if in_area == 0:
@@ -89,3 +95,4 @@ func fire():
 	get_parent().add_child(bullet)
 	bullet.rotation = 0 if facing_right else PI
 	bullet.global_position = $Bullet.global_position
+	set_health(health - 3)
