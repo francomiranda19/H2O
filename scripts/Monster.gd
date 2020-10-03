@@ -96,3 +96,6 @@ func fire():
 	bullet.rotation = 0 if facing_right else PI
 	bullet.global_position = $Bullet.global_position
 	set_health(health - 3)
+
+func take_damage(damage):
+	print(damage)
