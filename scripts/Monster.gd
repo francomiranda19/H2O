@@ -72,3 +72,7 @@ func _physics_process(delta):
 		$Sprite.flip_h = true
 	if target_vel.x > 0:
 		$Sprite.flip_h = false
+		
+func take_damage(damage):
+	print(damage)
+	

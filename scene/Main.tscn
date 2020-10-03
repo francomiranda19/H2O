@@ -1,15 +1,16 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://textures/Suelometalico.png" type="Texture" id=1]
 [ext_resource path="res://textures/Leather.png" type="Texture" id=2]
 [ext_resource path="res://textures/Metal.png" type="Texture" id=3]
-[ext_resource path="res://scene/Monster.tscn" type="PackedScene" id=4]
 [ext_resource path="res://textures/Chip.png" type="Texture" id=5]
 [ext_resource path="res://textures/PanelNave2.png" type="Texture" id=6]
 [ext_resource path="res://music/DubStepDropBoom.wav" type="AudioStream" id=7]
 [ext_resource path="res://textures/PanelNave4.png" type="Texture" id=8]
 [ext_resource path="res://sprites/health/health_over.png" type="Texture" id=9]
 [ext_resource path="res://sprites/health/health_progress.png" type="Texture" id=10]
+[ext_resource path="res://scene/Platform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scene/Cage.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.652, 10.6594 )
@@ -66,9 +67,6 @@ stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Monster" parent="." instance=ExtResource( 4 )]
-position = Vector2( 130.947, 478.709 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 142.175, 256.877 )
@@ -438,3 +436,68 @@ nine_patch_stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Platform" parent="." instance=ExtResource( 11 )]
+position = Vector2( 10125.2, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Platform2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 10436.7, 1137.5 )
+time = 3
+
+[node name="Platform3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 10745.5, 1137.5 )
+time = 3
+offset = 1.0
+
+[node name="Platform4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 11054.1, 1137.5 )
+time = 3
+offset = 1.5
+
+[node name="Platform5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 11365.7, 1137.5 )
+time = 3
+offset = 2.0
+
+[node name="Platform6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 11674.4, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Platform7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 11980.1, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Platform8" parent="." instance=ExtResource( 11 )]
+position = Vector2( 12291.6, 1137.5 )
+time = 3
+
+[node name="Platform9" parent="." instance=ExtResource( 11 )]
+position = Vector2( 12600.4, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Platform10" parent="." instance=ExtResource( 11 )]
+position = Vector2( 12909, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Platform11" parent="." instance=ExtResource( 11 )]
+position = Vector2( 13220.6, 1137.5 )
+time = 3
+
+[node name="Platform12" parent="." instance=ExtResource( 11 )]
+position = Vector2( 13529.3, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Platform13" parent="." instance=ExtResource( 11 )]
+position = Vector2( 13835, 1137.5 )
+time = 3
+offset = 0.0
+
+[node name="Cage" parent="." instance=ExtResource( 12 )]
+position = Vector2( 210.32, 354.971 )
