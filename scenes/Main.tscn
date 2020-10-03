@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/city/background/city_background_clean.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://textures/city/rain/rain_drops-03.png" type="Texture" id=7]
 [ext_resource path="res://textures/city/background/BurnedGround_S.jpg" type="Texture" id=8]
 [ext_resource path="res://textures/city/background/Stairs.png" type="Texture" id=9]
+[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 139, 388.006 )
@@ -391,3 +392,11 @@ __meta__ = {
 
 [node name="Rain" type="AnimationPlayer" parent="."]
 anims/rain = SubResource( 11 )
+
+[node name="Enemy" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2085.65, 43.6459 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2627.19, 43.6459 )
+scale = Vector2( 2, 2 )
