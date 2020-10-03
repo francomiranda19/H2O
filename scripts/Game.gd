@@ -1,6 +1,6 @@
 extends Node2D
 
-var Levels = [
+var Levels = [preload("res://scene/Intro.tscn"),
 	preload("res://scene/TitleScreen.tscn"),
 	preload("res://scene/Main.tscn")]
 
