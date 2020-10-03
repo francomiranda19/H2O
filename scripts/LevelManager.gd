@@ -1,4 +1,9 @@
 extends Node
 
+onready var Game = get_tree().get_root().get_node("Game")
+
 func next():
-	get_tree().get_root().get_node("Game").next()
+	Game.next()
+
+func change_scene(scene):
+	Game.change_scene(scene)

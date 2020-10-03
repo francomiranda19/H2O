@@ -6,5 +6,5 @@ func _ready():
 
 func on_Back_pressed():
 	$Click.play()
-	get_tree().change_scene("res://scene/TitleScreen.tscn")
+	LevelManager.change_scene("res://scenes/TitleScreen.tscn")
 	

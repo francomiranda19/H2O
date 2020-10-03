@@ -14,7 +14,7 @@
 [ext_resource path="res://sprites/20/jump/Jump_2.png" type="Texture" id=12]
 [ext_resource path="res://sprites/20/crouch/Crouch_ver_2_1.png" type="Texture" id=13]
 [ext_resource path="res://sprites/20/crouch/Crouch_ver_2_2.png" type="Texture" id=14]
-[ext_resource path="res://sprites/20/attack/Shoot.png" type="Texture" id=15]
+[ext_resource path="res://sprites/20/attack/Shoot_2.png" type="Texture" id=15]
 [ext_resource path="res://sprites/100/idle/Idle_3.png" type="Texture" id=16]
 [ext_resource path="res://sprites/100/idle/Idle_2.png" type="Texture" id=17]
 [ext_resource path="res://sprites/100/idle/Idle_1.png" type="Texture" id=18]
@@ -665,10 +665,9 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0934449, -0.572059 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -1.85168, 15.8991 )
 shape = SubResource( 1 )
 

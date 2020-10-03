@@ -3,7 +3,7 @@ extends Node2D
 var hitpoints = 5
 var animation_time = 0.5
 var acc_time = 0
-var Monster = preload("res://scene/Monster.tscn")
+var Monster = preload("res://scenes/Monster.tscn")
 
 func _ready():
 	$AnimationPlayer.play("Start")

@@ -12,7 +12,7 @@ func on_Start_pressed():
 	
 func on_Controls_pressed():
 	$Click.play()
-	get_tree().change_scene("res://scene/Controls.tscn")
+	LevelManager.change_scene("res://scenes/Controls.tscn")
 
 func on_Exit_pressed():
 	$Click.play()
