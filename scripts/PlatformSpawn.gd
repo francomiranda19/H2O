@@ -7,6 +7,10 @@ export var amount = 0 setget set_amount
 export var separation = 100 setget set_separation 
 export var time = 5 setget set_time
 export var offset = 0.5 setget set_offset
+var is_ready = false
+
+func _ready():
+  is_ready = true
 
 func set_time(value):
 	time = value
@@ -43,8 +47,9 @@ func set_separation(value):
 		get_child(i).position.x = separation*i
 	
 func update():
-	for i in get_child_count():
-		get_child(i).start()
+	if is_ready:
+		for i in get_child_count():
+			get_child(i).start()
 		
 	
 	

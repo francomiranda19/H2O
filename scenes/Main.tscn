@@ -1,7 +1,6 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scenes/Cage.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://textures/PanelNave4.png" type="Texture" id=3]
 [ext_resource path="res://textures/Suelometalico.png" type="Texture" id=4]
 [ext_resource path="res://textures/Chip.png" type="Texture" id=5]
@@ -362,15 +361,15 @@ __meta__ = {
 }
 
 [node name="Ground5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 15356.4, 2378.61 )
+position = Vector2( 15416.8, 2405.49 )
 shape = SubResource( 13 )
 
 [node name="Ground6" type="TextureRect" parent="StaticBody2D"]
 modulate = Color( 0.341176, 0.388235, 0.862745, 1 )
-margin_left = 13814.8
-margin_top = 835.199
-margin_right = 19961.8
-margin_bottom = 7037.2
+margin_left = 13875.2
+margin_top = 862.074
+margin_right = 20022.2
+margin_bottom = 7064.07
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 stretch_mode = 2
@@ -379,15 +378,15 @@ __meta__ = {
 }
 
 [node name="Ground7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 22742.5, 2359.14 )
+position = Vector2( 22559.5, 2405.47 )
 shape = SubResource( 13 )
 
 [node name="Ground8" type="TextureRect" parent="StaticBody2D"]
 modulate = Color( 0.341176, 0.388235, 0.862745, 1 )
-margin_left = 21197.6
-margin_top = 813.464
-margin_right = 27344.6
-margin_bottom = 7015.46
+margin_left = 21014.6
+margin_top = 859.791
+margin_right = 27161.6
+margin_bottom = 7061.79
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 stretch_mode = 2
@@ -417,73 +416,26 @@ stream = ExtResource( 8 )
 volume_db = -10.0
 autoplay = true
 
-[node name="Platform" parent="." instance=ExtResource( 2 )]
-position = Vector2( 10125.2, 1137.5 )
-time = 3
-offset = 0.0
+[node name="Cage" parent="." instance=ExtResource( 1 )]
+position = Vector2( 230.065, 378.024 )
 
-[node name="Platform2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 10436.7, 1137.5 )
-time = 3
-
-[node name="Platform3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 10745.5, 1137.5 )
+[node name="PlatformSpawn" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10127.4, 1133.04 )
+amount = 13
+separation = 310
 time = 3
 offset = 1.0
 
-[node name="Platform4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 11054.1, 1137.5 )
-time = 3
-offset = 1.5
-
-[node name="Platform5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 11365.7, 1137.5 )
-time = 3
-offset = 2.0
-
-[node name="Platform6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 11674.4, 1137.5 )
-time = 3
-offset = 0.0
-
-[node name="Platform7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 11980.1, 1137.5 )
-time = 3
-offset = 0.0
-
-[node name="Platform8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 12291.6, 1137.5 )
-time = 3
-
-[node name="Platform9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 12600.4, 1137.5 )
-time = 3
-offset = 0.0
-
-[node name="Platform10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 12909, 1137.5 )
-time = 3
-offset = 0.0
-
-[node name="Platform11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 13220.6, 1137.5 )
-time = 3
-
-[node name="Platform12" parent="." instance=ExtResource( 2 )]
-position = Vector2( 13529.3, 1137.5 )
-time = 3
-offset = 0.0
-
-[node name="Platform13" parent="." instance=ExtResource( 2 )]
-position = Vector2( 13835, 1137.5 )
-time = 3
-offset = 0.0
-
-[node name="Cage" parent="." instance=ExtResource( 1 )]
-position = Vector2( 9705.66, 944.636 )
-
-[node name="PlatformSpawn" parent="." instance=ExtResource( 6 )]
-position = Vector2( 8882.88, 669.182 )
-amount = 40
+[node name="PlatformSpawn2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 17260.8, 1133.04 )
+amount = 13
+separation = 310
 time = 2
-offset = 0.3
+offset = 0.4
+
+[node name="PlatformSpawn3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 24397.3, 1133.04 )
+amount = 10
+separation = 310
+time = 1
+offset = 0.1

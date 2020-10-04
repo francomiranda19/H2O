@@ -12,17 +12,16 @@ var is_offset = true
 var bodies = []
 
 func start():
-	if $Timer:
-		if not $Timer.is_stopped():
-			$Timer.stop()
-		$Fire.visible = false
-		if offset>0:	
-			$Timer.wait_time = offset
-			$Timer.one_shot = true
-			is_offset = true
-		else:
-			is_offset = false
-		$Timer.start()
+	$Fire.visible = false
+	if offset > 0:
+		$Timer.wait_time = offset
+		$Timer.one_shot = true
+		is_offset = true
+	else:
+		$Timer.wait_time = time
+		$Timer.one_shot = false
+		is_offset = false
+	$Timer.start()
 
 func _ready():
 	$Area2D.connect("body_entered", self, "on_body_entered")
