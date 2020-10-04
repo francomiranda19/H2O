@@ -17,7 +17,7 @@ onready var playback = $AnimationTree.get("parameters/playback")
 func set_health(value):
 	health = clamp(value, 0, 100)
 	$CanvasLayer/HealthBar.value = value
-
+	
 func check_crouch():
 	if in_area == 0:
 		crouching = false
@@ -34,6 +34,10 @@ func on_body_exited(body: Node):
 func _ready():
 	$Area2D.connect("body_entered", self, "on_body_entered")
 	$Area2D.connect("body_exited", self, "on_body_exited")
+	$Timer.connect("timeout",self,"on_timeout")
+	
+func on_timeout():
+	modulate.a = 1
 	
 func _physics_process(delta):
 	linear_vel.y += g * delta
@@ -98,4 +102,9 @@ func fire():
 	set_health(health - 3)
 
 func take_damage(damage):
-	print(damage)
+	if not $Timer.is_stopped():
+		return
+	self.health -= damage
+	$Timer.start()
+	modulate.a = 0.5
+	

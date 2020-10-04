@@ -668,6 +668,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -1.85168, 15.8991 )
 shape = SubResource( 1 )
 
@@ -692,7 +693,6 @@ parameters/playback = SubResource( 59 )
 position = Vector2( 1170.89, -534.219 )
 current = true
 limit_left = 0
-limit_right = 7830
 
 [node name="Area2D" type="Area2D" parent="." groups=[
 "shoot",
@@ -723,3 +723,7 @@ nine_patch_stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
