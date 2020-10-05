@@ -112,3 +112,11 @@ func take_damage(damage):
 	self.health -= damage
 	$Timer.start()
 	modulate.a = 0.5
+	
+func heal(amount):
+	if not $Timer.is_stopped():
+		return
+	if health < 100:
+		self.health += amount
+		$Timer.start()
+		modulate.a = 0.5

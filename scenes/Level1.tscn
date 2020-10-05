@@ -1,14 +1,16 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/Cage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://textures/level1/PanelNave4.png" type="Texture" id=3]
 [ext_resource path="res://textures/level1/Suelometalico.png" type="Texture" id=4]
 [ext_resource path="res://textures/level1/Chip.png" type="Texture" id=5]
 [ext_resource path="res://scenes/PlatformSpawn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/level1/PanelNave2.png" type="Texture" id=7]
 [ext_resource path="res://music/level1/DubStepDropBoom.wav" type="AudioStream" id=8]
-[ext_resource path="res://textures/level1/Leather.png" type="Texture" id=9]
+[ext_resource path="res://textures/level1/PanelNave1.png" type="Texture" id=9]
 [ext_resource path="res://textures/level1/Metal.png" type="Texture" id=10]
+[ext_resource path="res://textures/level2/background/BurnedGround_S.jpg" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.652, 10.6594 )
@@ -268,12 +270,13 @@ __meta__ = {
 }
 
 [node name="RedPlatform" type="TextureRect" parent="StaticBody2D"]
+modulate = Color( 0.92549, 0.113725, 0.113725, 1 )
 margin_left = 2339.0
 margin_top = -392.0
 margin_right = 26803.0
 margin_bottom = 3704.0
 rect_scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -284,12 +287,13 @@ position = Vector2( 3708.08, -409.946 )
 shape = SubResource( 10 )
 
 [node name="RedPlatform2" type="TextureRect" parent="StaticBody2D"]
+modulate = Color( 0.92549, 0.113725, 0.113725, 1 )
 margin_left = 3454.08
 margin_top = -472.946
 margin_right = 20388.1
 margin_bottom = 3623.05
 rect_scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -300,12 +304,13 @@ position = Vector2( 4771.41, -489.984 )
 shape = SubResource( 11 )
 
 [node name="RedPlatform3" type="TextureRect" parent="StaticBody2D"]
+modulate = Color( 0.92549, 0.113725, 0.113725, 1 )
 margin_left = 4352.0
 margin_top = -553.0
 margin_right = 32395.0
 margin_bottom = 3543.0
 rect_scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -316,12 +321,13 @@ position = Vector2( 5095.11, 283.568 )
 shape = SubResource( 12 )
 
 [node name="RedPlatform4" type="TextureRect" parent="StaticBody2D"]
+modulate = Color( 0.92549, 0.113725, 0.113725, 1 )
 margin_left = 4160.0
 margin_top = 225.0
 margin_right = 66553.0
 margin_bottom = 4321.0
 rect_scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -332,12 +338,13 @@ position = Vector2( 6010.43, -553.772 )
 shape = SubResource( 11 )
 
 [node name="RedPlatform5" type="TextureRect" parent="StaticBody2D"]
+modulate = Color( 0.92549, 0.113725, 0.113725, 1 )
 margin_left = 5601.02
 margin_top = -613.929
 margin_right = 33045.0
 margin_bottom = 3482.07
 rect_scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -404,8 +411,8 @@ margin_left = 27208.0
 margin_top = 859.791
 margin_right = 259544.0
 margin_bottom = 108687.0
-rect_scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 7 )
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -417,25 +424,34 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Cage" parent="." instance=ExtResource( 1 )]
-position = Vector2( 238.704, 372.986 )
+position = Vector2( 256.559, 373.443 )
 
 [node name="PlatformSpawn" parent="." instance=ExtResource( 6 )]
 position = Vector2( 10127.4, 1133.04 )
 amount = 13
 separation = 310
 time = 3
-offset = 1.0
+offset = 2.0
 
 [node name="PlatformSpawn2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 17260.8, 1133.04 )
 amount = 13
 separation = 310
 time = 2
-offset = 0.4
+offset = 0.7
 
 [node name="PlatformSpawn3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 24397.3, 1133.04 )
 amount = 10
 separation = 310
 time = 1
-offset = 0.1
+offset = 0.8
+
+[node name="Tap" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2939.8, -112.934 )
+
+[node name="Tap2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 22685.7, 1137.91 )
+
+[node name="Tap3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27959.5, 1137.91 )
