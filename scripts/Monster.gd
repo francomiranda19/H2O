@@ -61,39 +61,44 @@ func _physics_process(delta):
 			can_double_jump = false
 		linear_vel.y = -speed
 		
-	if on_floor:
-		can_double_jump = true
-		if linear_vel.length_squared() > 10:
-			playback.travel("run 20")
-		if linear_vel.length_squared() <= 10:
-			playback.travel("idle 20")
-		var crouch_pressed = Input.is_action_pressed("crouch")
-		if crouching or crouch_pressed:
-			crouching = true
-			playback.travel("crouch 20")
-		if crouching and not crouch_pressed:
-			check_crouch()
-	else:
-		if linear_vel.y > 0:
-			playback.travel("fall 20")
+	if health <= 0:
+		playback.travel("death 20")
+		linear_vel = Vector2(0, 300)
+	
+	elif health > 0:
+		if on_floor:
+			can_double_jump = true
+			if linear_vel.length_squared() > 10:
+				playback.travel("run 20")
+			if linear_vel.length_squared() <= 10:
+				playback.travel("idle 20")
+			var crouch_pressed = Input.is_action_pressed("crouch")
+			if crouching or crouch_pressed:
+				crouching = true
+				playback.travel("crouch 20")
+			if crouching and not crouch_pressed:
+				check_crouch()
 		else:
-			playback.travel("jump 20")
+			if linear_vel.y > 0:
+				playback.travel("fall 20")
+			else:
+				playback.travel("jump 20")
+				
+		if in_area == 0:
+			if attacking_press:
+				playback.travel("attack_start 20")
+			if attacking_released:
+				playback.travel("attack 20")
 			
-	if in_area == 0:
-		if attacking_press:
-			playback.travel("attack_start 20")
-		if attacking_released:
-			playback.travel("attack 20")
-		
-	if facing_right and target_vel.x < 0:
-		$Sprite.scale.x = -$Sprite.scale.x
-		$Bullet.position.x = -$Bullet.position.x
-		facing_right = false
-	if not facing_right and target_vel.x > 0:
-		$Sprite.scale.x = -$Sprite.scale.x
-		$Bullet.position.x = -$Bullet.position.x
-		facing_right = true
-		
+		if facing_right and target_vel.x < 0:
+			$Sprite.scale.x = -$Sprite.scale.x
+			$Bullet.position.x = -$Bullet.position.x
+			facing_right = false
+		if not facing_right and target_vel.x > 0:
+			$Sprite.scale.x = -$Sprite.scale.x
+			$Bullet.position.x = -$Bullet.position.x
+			facing_right = true
+			
 func fire():
 	var bullet = Bullet.instance()
 	get_parent().add_child(bullet)
@@ -107,4 +112,3 @@ func take_damage(damage):
 	self.health -= damage
 	$Timer.start()
 	modulate.a = 0.5
-	
