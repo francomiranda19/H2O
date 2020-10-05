@@ -53,6 +53,7 @@ func _physics_process(delta):
 	var attacking_press = Input.is_action_pressed("attack")
 	var attacking_released = Input.is_action_just_released("attack")
 	var jumping = Input.is_action_just_pressed("jump")
+	var crouch_pressed = Input.is_action_pressed("crouch")
 	
 	if attacking_press and on_floor: 
 		linear_vel.x = 0
@@ -61,18 +62,46 @@ func _physics_process(delta):
 			can_double_jump = false
 		linear_vel.y = -speed
 		
-	if health <= 0:
-		playback.travel("death 20")
-		linear_vel = Vector2(0, 300)
+	if health >= 90:
+		if on_floor:
+			can_double_jump = true
+			if linear_vel.length_squared() > 10:
+				playback.travel("run 100")
+			if linear_vel.length_squared() <= 10:
+				playback.travel("idle 100")
+			if crouching or crouch_pressed:
+				crouching = true
+				playback.travel("crouch 100")
+			if crouching and not crouch_pressed:
+				check_crouch()
+		else:
+			if linear_vel.y > 0:
+				playback.travel("fall 100")
+			else:
+				playback.travel("jump 100")
+				
+		if in_area == 0:
+			if attacking_press:
+				playback.travel("attack_start 100")
+			if attacking_released:
+				playback.travel("attack 100")
+				
+		if facing_right and target_vel.x < 0:
+			$Sprite.flip_h = true
+			$Bullet.position.x = -$Bullet.position.x
+			facing_right = false
+		if not facing_right and target_vel.x > 0:
+			$Sprite.flip_h = false
+			$Bullet.position.x = -$Bullet.position.x
+			facing_right = true
 	
-	elif health > 0:
+	elif 89 >= health and health > 0:
 		if on_floor:
 			can_double_jump = true
 			if linear_vel.length_squared() > 10:
 				playback.travel("run 20")
 			if linear_vel.length_squared() <= 10:
 				playback.travel("idle 20")
-			var crouch_pressed = Input.is_action_pressed("crouch")
 			if crouching or crouch_pressed:
 				crouching = true
 				playback.travel("crouch 20")
@@ -89,15 +118,19 @@ func _physics_process(delta):
 				playback.travel("attack_start 20")
 			if attacking_released:
 				playback.travel("attack 20")
-			
+				
 		if facing_right and target_vel.x < 0:
-			$Sprite.scale.x = -$Sprite.scale.x
+			$Sprite.flip_h = true
 			$Bullet.position.x = -$Bullet.position.x
 			facing_right = false
 		if not facing_right and target_vel.x > 0:
-			$Sprite.scale.x = -$Sprite.scale.x
+			$Sprite.flip_h = false
 			$Bullet.position.x = -$Bullet.position.x
 			facing_right = true
+			
+	elif health <= 0:
+		playback.travel("death 20")
+		linear_vel = Vector2(0, 300)
 			
 func fire():
 	var bullet = Bullet.instance()
