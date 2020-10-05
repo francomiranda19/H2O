@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/ChangeLevel.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 227.853, 47.6951 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 487.769, 250.82 )
+
+[node name="ChangeLevel" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, -295.778 )
+shape = SubResource( 2 )
