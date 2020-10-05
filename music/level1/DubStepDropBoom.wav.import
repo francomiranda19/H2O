@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DubStepDropBoom.wav-4ff926ecf19e4b0f95bfa6c5445fa548.sample"
+
+[deps]
+
+source_file="res://music/level1/DubStepDropBoom.wav"
+dest_files=[ "res://.import/DubStepDropBoom.wav-4ff926ecf19e4b0f95bfa6c5445fa548.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

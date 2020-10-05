@@ -50,7 +50,3 @@ func on_body_entered(body: Node):
 	
 func on_body_exited(body: Node):
 	bodies.erase(body)
-	
-
-	
-	

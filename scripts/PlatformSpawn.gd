@@ -50,7 +50,3 @@ func update():
 	if is_ready:
 		for i in get_child_count():
 			get_child(i).start()
-		
-	
-	
-	

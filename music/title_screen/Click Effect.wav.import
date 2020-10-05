@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Click Effect.wav-1ed61b49e934e51c51df2ebb090644f8.sample"
+
+[deps]
+
+source_file="res://music/title_screen/Click Effect.wav"
+dest_files=[ "res://.import/Click Effect.wav-1ed61b49e934e51c51df2ebb090644f8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

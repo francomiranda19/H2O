@@ -17,5 +17,3 @@ func on_Controls_pressed():
 func on_Exit_pressed():
 	$Click.play()
 	get_tree().quit()
-
-
