@@ -90,7 +90,9 @@ tracks/3/keys = {
 "values": [ Vector2( 1.23741, 0.353554 ) ]
 }
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" groups=[
+"enemy",
+]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

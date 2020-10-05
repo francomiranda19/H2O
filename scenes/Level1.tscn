@@ -24,7 +24,7 @@ extents = Vector2( 62.5597, 367.912 )
 extents = Vector2( 563.341, 281.128 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 298.644, 636.124 )
+extents = Vector2( 296.657, 583.882 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 472.54, 119.853 )
@@ -105,7 +105,7 @@ position = Vector2( -726.17, 16.819 )
 shape = SubResource( 3 )
 
 [node name="Wall" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 643.893, -427.983 )
+position = Vector2( 646.938, -377.539 )
 shape = SubResource( 4 )
 
 [node name="Wall2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -239,9 +239,9 @@ __meta__ = {
 [node name="Wall4" type="TextureRect" parent="StaticBody2D"]
 modulate = Color( 0.85098, 0.572549, 0.0705882, 1 )
 margin_left = 351.0
-margin_top = -1468.0
+margin_top = -1472.0
 margin_right = 3299.0
-margin_bottom = 6920.0
+margin_bottom = 6916.0
 rect_scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 10 )
 stretch_mode = 2

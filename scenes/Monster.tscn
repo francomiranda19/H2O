@@ -32,14 +32,13 @@
 [ext_resource path="res://sprites/100/jump/Jump_1.png" type="Texture" id=30]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 66.299
-height = 48.9767
+radius = 53.911
+height = 51.7981
 
-[sub_resource type="RectangleShape2D" id=91]
-extents = Vector2( 259.341, 104.903 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48.316, 25.2952 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "attack 20"
+[sub_resource type="Animation" id=3]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -161,7 +160,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -200,8 +199,7 @@ tracks/12/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "attack_start 20"
+[sub_resource type="Animation" id=4]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -309,7 +307,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -348,7 +346,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -457,7 +455,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -481,7 +479,7 @@ tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 7.59404, -11.609 ) ]
+"values": [ Vector2( 0.523, -31.408 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("Area2D/CollisionShape2D:scale")
@@ -496,7 +494,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -604,7 +602,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -643,8 +641,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "death 20"
+[sub_resource type="Animation" id=7]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -740,7 +737,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -779,7 +776,7 @@ tracks/10/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -888,7 +885,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -927,7 +924,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 0.8
 loop = true
 step = 0.05
@@ -1022,7 +1019,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0.05 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0.2, 0.2 ) ]
@@ -1037,7 +1034,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1076,8 +1073,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "jump 100"
+[sub_resource type="Animation" id=10]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -1186,7 +1182,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1225,7 +1221,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 0.1
 loop = true
 step = 0.05
@@ -1308,7 +1304,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.05 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0.2, 0.2 ) ]
@@ -1335,7 +1331,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1374,8 +1370,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "jump_start 100"
+[sub_resource type="Animation" id=12]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -1483,7 +1478,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1522,7 +1517,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 length = 0.1
 step = 0.05
 tracks/0/type = "value"
@@ -1631,7 +1626,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1670,8 +1665,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "run 100"
+[sub_resource type="Animation" id=14]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -1780,7 +1774,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1819,7 +1813,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -1928,7 +1922,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 91 ) ]
+"values": [ SubResource( 2 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Area2D/CollisionShape2D:shape:extents")
@@ -1967,92 +1961,79 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=94]
-animation = "attack 20"
-
-[sub_resource type="AnimationNodeAnimation" id=15]
-animation = "attack 20"
-
-[sub_resource type="AnimationNodeAnimation" id=95]
-animation = "attack_start 20"
-
 [sub_resource type="AnimationNodeAnimation" id=16]
-animation = "attack_start 20"
-
-[sub_resource type="AnimationNodeAnimation" id=96]
-animation = "crouch 20"
+animation = "attack 20"
 
 [sub_resource type="AnimationNodeAnimation" id=17]
-animation = "crouch 20"
-
-[sub_resource type="AnimationNodeAnimation" id=97]
-animation = "crouch_start 20"
-
-[sub_resource type="AnimationNodeAnimation" id=98]
-animation = "crouch_start 20"
+animation = "attack 20"
 
 [sub_resource type="AnimationNodeAnimation" id=18]
-animation = "crouch_start 20"
+animation = "attack_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=19]
-animation = "crouch_start 20"
+animation = "attack_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=20]
-animation = "death 20"
+animation = "crouch 20"
 
 [sub_resource type="AnimationNodeAnimation" id=21]
-animation = "jump 100"
+animation = "crouch 20"
 
 [sub_resource type="AnimationNodeAnimation" id=22]
-animation = "jump 20"
+animation = "crouch_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=23]
-animation = "idle 100"
+animation = "crouch_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=24]
-animation = "idle 20"
+animation = "crouch_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=25]
-animation = "jump 100"
+animation = "crouch_start 20"
 
 [sub_resource type="AnimationNodeAnimation" id=26]
-animation = "jump 20"
+animation = "death 20"
 
 [sub_resource type="AnimationNodeAnimation" id=27]
-animation = "jump_start 100"
+animation = "jump 100"
 
 [sub_resource type="AnimationNodeAnimation" id=28]
-animation = "jump_start 20"
+animation = "jump 20"
 
 [sub_resource type="AnimationNodeAnimation" id=29]
-animation = "run 100"
+animation = "idle 100"
 
 [sub_resource type="AnimationNodeAnimation" id=30]
+animation = "idle 20"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "jump 100"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "jump 20"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "jump_start 100"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "jump_start 20"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "run 100"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
 animation = "run 20"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=32]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=33]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=36]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=37]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=38]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=39]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=40]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=42]
 
@@ -2061,34 +2042,35 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=44]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=45]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=46]
-priority = 0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=47]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=48]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=49]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=50]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=51]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=52]
+priority = 0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=53]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=54]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=55]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=56]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=57]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=58]
 
@@ -2097,37 +2079,37 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=60]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=61]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=62]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=63]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=64]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=65]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=66]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=67]
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=68]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=69]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=70]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=71]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=72]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=73]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=74]
 
@@ -2146,7 +2128,6 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=81]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=82]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=83]
 
@@ -2159,25 +2140,44 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=87]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=88]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=89]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=90]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=91]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=92]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=93]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=94]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=95]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=96]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=97]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=98]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=99]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=100]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=101]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=102]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=103]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=104]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=105]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=106]
 switch_mode = 2
@@ -2198,10 +2198,8 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=112]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=113]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=114]
 
@@ -2218,63 +2216,59 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=120]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=121]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=122]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=123]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=124]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id=89]
-"states/attack 100/node" = SubResource( 94 )
+[sub_resource type="AnimationNodeStateMachine" id=123]
+"states/attack 100/node" = SubResource( 16 )
 "states/attack 100/position" = Vector2( 792.691, -369.171 )
-"states/attack 20/node" = SubResource( 15 )
+"states/attack 20/node" = SubResource( 17 )
 "states/attack 20/position" = Vector2( 935, 429 )
-"states/attack_start 100/node" = SubResource( 95 )
+"states/attack_start 100/node" = SubResource( 18 )
 "states/attack_start 100/position" = Vector2( 998.691, -446.11 )
-"states/attack_start 20/node" = SubResource( 16 )
+"states/attack_start 20/node" = SubResource( 19 )
 "states/attack_start 20/position" = Vector2( 1136.5, 317.508 )
-"states/crouch 100/node" = SubResource( 96 )
-"states/crouch 100/position" = Vector2( 305, -404.132 )
-"states/crouch 20/node" = SubResource( 17 )
+"states/crouch 100/node" = SubResource( 20 )
+"states/crouch 100/position" = Vector2( 305, -405.132 )
+"states/crouch 20/node" = SubResource( 21 )
 "states/crouch 20/position" = Vector2( 363, 410.164 )
-"states/crouch_start 100/node" = SubResource( 97 )
+"states/crouch_start 100/node" = SubResource( 22 )
 "states/crouch_start 100/position" = Vector2( 217.691, -533.614 )
-"states/crouch_start 2 100/node" = SubResource( 98 )
+"states/crouch_start 2 100/node" = SubResource( 23 )
 "states/crouch_start 2 100/position" = Vector2( 533.691, -374.779 )
-"states/crouch_start 2 20/node" = SubResource( 18 )
+"states/crouch_start 2 20/node" = SubResource( 24 )
 "states/crouch_start 2 20/position" = Vector2( 632, 443.164 )
-"states/crouch_start 20/node" = SubResource( 19 )
+"states/crouch_start 20/node" = SubResource( 25 )
 "states/crouch_start 20/position" = Vector2( 142, 299 )
-"states/death 20/node" = SubResource( 20 )
+"states/death 20/node" = SubResource( 26 )
 "states/death 20/position" = Vector2( 552.691, -187.985 )
-"states/fall 100/node" = SubResource( 21 )
+"states/fall 100/node" = SubResource( 27 )
 "states/fall 100/position" = Vector2( 962.691, -614.513 )
-"states/fall 20/node" = SubResource( 22 )
+"states/fall 20/node" = SubResource( 28 )
 "states/fall 20/position" = Vector2( 1153, 118.524 )
-"states/idle 100/node" = SubResource( 23 )
+"states/idle 100/node" = SubResource( 29 )
 "states/idle 100/position" = Vector2( 151.691, -695.114 )
-"states/idle 20/node" = SubResource( 24 )
+"states/idle 20/node" = SubResource( 30 )
 "states/idle 20/position" = Vector2( 61, 39 )
-"states/jump 100/node" = SubResource( 25 )
+"states/jump 100/node" = SubResource( 31 )
 "states/jump 100/position" = Vector2( 876.691, -737.285 )
-"states/jump 20/node" = SubResource( 26 )
+"states/jump 20/node" = SubResource( 32 )
 "states/jump 20/position" = Vector2( 1060, -15 )
-"states/jump_start 100/node" = SubResource( 27 )
+"states/jump_start 100/node" = SubResource( 33 )
 "states/jump_start 100/position" = Vector2( 655.691, -854.285 )
-"states/jump_start 20/node" = SubResource( 28 )
+"states/jump_start 20/node" = SubResource( 34 )
 "states/jump_start 20/position" = Vector2( 935, -129 )
-"states/run 100/node" = SubResource( 29 )
+"states/run 100/node" = SubResource( 35 )
 "states/run 100/position" = Vector2( 341.691, -870.114 )
-"states/run 20/node" = SubResource( 30 )
+"states/run 20/node" = SubResource( 36 )
 "states/run 20/position" = Vector2( 195, -140 )
-transitions = [ "idle 20", "run 20", SubResource( 31 ), "run 20", "idle 20", SubResource( 32 ), "idle 20", "jump_start 20", SubResource( 33 ), "run 20", "jump_start 20", SubResource( 34 ), "jump_start 20", "jump 20", SubResource( 35 ), "idle 20", "crouch_start 20", SubResource( 36 ), "run 20", "crouch_start 20", SubResource( 37 ), "crouch 20", "run 20", SubResource( 38 ), "crouch_start 20", "crouch 20", SubResource( 39 ), "jump 20", "crouch_start 20", SubResource( 40 ), "jump 20", "fall 20", SubResource( 41 ), "idle 20", "fall 20", SubResource( 42 ), "run 20", "fall 20", SubResource( 43 ), "crouch 20", "fall 20", SubResource( 44 ), "fall 20", "idle 20", SubResource( 45 ), "crouch 20", "crouch_start 2 20", SubResource( 46 ), "fall 20", "run 20", SubResource( 47 ), "crouch_start 2 20", "idle 20", SubResource( 48 ), "fall 20", "jump 20", SubResource( 49 ), "crouch_start 2 20", "run 20", SubResource( 50 ), "crouch_start 2 20", "jump 20", SubResource( 51 ), "fall 20", "attack_start 20", SubResource( 52 ), "jump 20", "attack_start 20", SubResource( 53 ), "run 20", "attack_start 20", SubResource( 54 ), "idle 20", "attack_start 20", SubResource( 55 ), "attack_start 20", "fall 20", SubResource( 56 ), "attack_start 20", "jump 20", SubResource( 57 ), "attack_start 20", "run 20", SubResource( 58 ), "attack_start 20", "idle 20", SubResource( 59 ), "attack_start 20", "crouch_start 20", SubResource( 60 ), "crouch_start 2 20", "attack_start 20", SubResource( 61 ), "attack 20", "idle 20", SubResource( 62 ), "attack 20", "run 20", SubResource( 63 ), "attack 20", "jump 20", SubResource( 64 ), "attack 20", "crouch_start 20", SubResource( 65 ), "attack_start 20", "attack 20", SubResource( 66 ), "attack 20", "fall 20", SubResource( 67 ), "run 20", "death 20", SubResource( 68 ), "jump_start 20", "death 20", SubResource( 69 ), "jump 20", "death 20", SubResource( 70 ), "fall 20", "death 20", SubResource( 71 ), "idle 20", "death 20", SubResource( 72 ), "crouch_start 20", "death 20", SubResource( 73 ), "attack_start 20", "death 20", SubResource( 74 ), "attack 20", "death 20", SubResource( 75 ), "crouch_start 2 20", "death 20", SubResource( 76 ), "crouch 20", "death 20", SubResource( 77 ), "idle 100", "run 100", SubResource( 78 ), "run 100", "idle 100", SubResource( 79 ), "run 100", "jump_start 100", SubResource( 80 ), "idle 100", "jump_start 100", SubResource( 81 ), "jump_start 100", "jump 100", SubResource( 82 ), "jump 100", "fall 100", SubResource( 83 ), "fall 100", "jump 100", SubResource( 84 ), "idle 100", "fall 100", SubResource( 85 ), "run 100", "fall 100", SubResource( 86 ), "fall 100", "run 100", SubResource( 87 ), "fall 100", "idle 100", SubResource( 88 ), "idle 20", "idle 100", SubResource( 92 ), "idle 100", "idle 20", SubResource( 93 ), "idle 100", "crouch_start 100", SubResource( 99 ), "run 100", "crouch_start 100", SubResource( 100 ), "jump 100", "crouch_start 100", SubResource( 101 ), "crouch_start 100", "crouch 100", SubResource( 102 ), "crouch 100", "run 100", SubResource( 103 ), "crouch 100", "fall 100", SubResource( 104 ), "crouch 100", "crouch_start 2 100", SubResource( 105 ), "crouch_start 2 100", "idle 100", SubResource( 106 ), "crouch_start 2 100", "run 100", SubResource( 107 ), "crouch_start 2 100", "jump 100", SubResource( 108 ), "attack 100", "crouch_start 100", SubResource( 109 ), "attack 100", "idle 100", SubResource( 110 ), "attack 100", "run 100", SubResource( 111 ), "attack 100", "jump 100", SubResource( 112 ), "attack 100", "fall 100", SubResource( 113 ), "fall 100", "attack_start 100", SubResource( 114 ), "attack_start 100", "fall 100", SubResource( 115 ), "attack_start 100", "jump 100", SubResource( 116 ), "jump 100", "attack_start 100", SubResource( 117 ), "idle 100", "attack_start 100", SubResource( 118 ), "attack_start 100", "idle 100", SubResource( 119 ), "run 100", "attack_start 100", SubResource( 120 ), "attack_start 100", "run 100", SubResource( 121 ), "attack_start 100", "crouch_start 100", SubResource( 122 ), "crouch_start 2 100", "attack_start 100", SubResource( 123 ), "attack_start 100", "attack 100", SubResource( 124 ) ]
+transitions = [ "idle 20", "run 20", SubResource( 37 ), "run 20", "idle 20", SubResource( 38 ), "idle 20", "jump_start 20", SubResource( 39 ), "run 20", "jump_start 20", SubResource( 40 ), "jump_start 20", "jump 20", SubResource( 41 ), "idle 20", "crouch_start 20", SubResource( 42 ), "run 20", "crouch_start 20", SubResource( 43 ), "crouch 20", "run 20", SubResource( 44 ), "crouch_start 20", "crouch 20", SubResource( 45 ), "jump 20", "crouch_start 20", SubResource( 46 ), "jump 20", "fall 20", SubResource( 47 ), "idle 20", "fall 20", SubResource( 48 ), "run 20", "fall 20", SubResource( 49 ), "crouch 20", "fall 20", SubResource( 50 ), "fall 20", "idle 20", SubResource( 51 ), "crouch 20", "crouch_start 2 20", SubResource( 52 ), "fall 20", "run 20", SubResource( 53 ), "crouch_start 2 20", "idle 20", SubResource( 54 ), "fall 20", "jump 20", SubResource( 55 ), "crouch_start 2 20", "run 20", SubResource( 56 ), "crouch_start 2 20", "jump 20", SubResource( 57 ), "fall 20", "attack_start 20", SubResource( 58 ), "jump 20", "attack_start 20", SubResource( 59 ), "run 20", "attack_start 20", SubResource( 60 ), "idle 20", "attack_start 20", SubResource( 61 ), "attack_start 20", "fall 20", SubResource( 62 ), "attack_start 20", "jump 20", SubResource( 63 ), "attack_start 20", "run 20", SubResource( 64 ), "attack_start 20", "idle 20", SubResource( 65 ), "attack_start 20", "crouch_start 20", SubResource( 66 ), "crouch_start 2 20", "attack_start 20", SubResource( 67 ), "attack 20", "idle 20", SubResource( 68 ), "attack 20", "run 20", SubResource( 69 ), "attack 20", "jump 20", SubResource( 70 ), "attack 20", "crouch_start 20", SubResource( 71 ), "attack_start 20", "attack 20", SubResource( 72 ), "attack 20", "fall 20", SubResource( 73 ), "run 20", "death 20", SubResource( 74 ), "jump_start 20", "death 20", SubResource( 75 ), "jump 20", "death 20", SubResource( 76 ), "fall 20", "death 20", SubResource( 77 ), "idle 20", "death 20", SubResource( 78 ), "crouch_start 20", "death 20", SubResource( 79 ), "attack_start 20", "death 20", SubResource( 80 ), "attack 20", "death 20", SubResource( 81 ), "crouch_start 2 20", "death 20", SubResource( 82 ), "crouch 20", "death 20", SubResource( 83 ), "idle 100", "run 100", SubResource( 84 ), "run 100", "idle 100", SubResource( 85 ), "run 100", "jump_start 100", SubResource( 86 ), "idle 100", "jump_start 100", SubResource( 87 ), "jump_start 100", "jump 100", SubResource( 88 ), "jump 100", "fall 100", SubResource( 89 ), "fall 100", "jump 100", SubResource( 90 ), "idle 100", "fall 100", SubResource( 91 ), "run 100", "fall 100", SubResource( 92 ), "fall 100", "run 100", SubResource( 93 ), "fall 100", "idle 100", SubResource( 94 ), "idle 20", "idle 100", SubResource( 95 ), "idle 100", "idle 20", SubResource( 96 ), "idle 100", "crouch_start 100", SubResource( 97 ), "run 100", "crouch_start 100", SubResource( 98 ), "jump 100", "crouch_start 100", SubResource( 99 ), "crouch_start 100", "crouch 100", SubResource( 100 ), "crouch 100", "run 100", SubResource( 101 ), "crouch 100", "fall 100", SubResource( 102 ), "crouch 100", "crouch_start 2 100", SubResource( 103 ), "crouch_start 2 100", "idle 100", SubResource( 104 ), "crouch_start 2 100", "run 100", SubResource( 105 ), "crouch_start 2 100", "jump 100", SubResource( 106 ), "attack 100", "crouch_start 100", SubResource( 107 ), "attack 100", "idle 100", SubResource( 108 ), "attack 100", "run 100", SubResource( 109 ), "attack 100", "jump 100", SubResource( 110 ), "attack 100", "fall 100", SubResource( 111 ), "fall 100", "attack_start 100", SubResource( 112 ), "attack_start 100", "fall 100", SubResource( 113 ), "attack_start 100", "jump 100", SubResource( 114 ), "jump 100", "attack_start 100", SubResource( 115 ), "idle 100", "attack_start 100", SubResource( 116 ), "attack_start 100", "idle 100", SubResource( 117 ), "run 100", "attack_start 100", SubResource( 118 ), "attack_start 100", "run 100", SubResource( 119 ), "attack_start 100", "crouch_start 100", SubResource( 120 ), "crouch_start 2 100", "attack_start 100", SubResource( 121 ), "attack_start 100", "attack 100", SubResource( 122 ) ]
 start_node = "idle 100"
-graph_offset = Vector2( -67.3093, -854.682 )
+graph_offset = Vector2( -67.3093, -911.214 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=90]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=124]
 
 [node name="Monster" type="KinematicBody2D" groups=[
 "player",
@@ -2283,47 +2277,44 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 3.7097, -348.281 )
-texture = ExtResource( 16 )
+position = Vector2( -0.093, -0.572 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.11586, -358.141 )
-scale = Vector2( 5, 5 )
+position = Vector2( -1.85168, 15.8991 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/attack 20" = SubResource( 2 )
-"anims/attack_start 20" = SubResource( 3 )
-"anims/crouch 20" = SubResource( 4 )
-"anims/crouch_start 20" = SubResource( 5 )
-"anims/death 20" = SubResource( 6 )
-"anims/idle 100" = SubResource( 7 )
-"anims/idle 20" = SubResource( 8 )
-"anims/jump 100" = SubResource( 9 )
-"anims/jump 20" = SubResource( 10 )
-"anims/jump_start 100" = SubResource( 11 )
-"anims/jump_start 20" = SubResource( 12 )
-"anims/run 100" = SubResource( 13 )
-"anims/run 20" = SubResource( 14 )
+"anims/attack 20" = SubResource( 3 )
+"anims/attack_start 20" = SubResource( 4 )
+"anims/crouch 20" = SubResource( 5 )
+"anims/crouch_start 20" = SubResource( 6 )
+"anims/death 20" = SubResource( 7 )
+"anims/idle 100" = SubResource( 8 )
+"anims/idle 20" = SubResource( 9 )
+"anims/jump 100" = SubResource( 10 )
+"anims/jump 20" = SubResource( 11 )
+"anims/jump_start 100" = SubResource( 12 )
+"anims/jump_start 20" = SubResource( 13 )
+"anims/run 100" = SubResource( 14 )
+"anims/run 20" = SubResource( 15 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 89 )
+tree_root = SubResource( 123 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource( 90 )
+parameters/playback = SubResource( 124 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1170.89, -534.219 )
 current = true
 limit_left = 0
 
-[node name="Area2D" type="Area2D" parent="." groups=[
-"shoot",
-]]
+[node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -0.534988, -688.46 )
-shape = SubResource( 91 )
+position = Vector2( 0.523, -31.408 )
+shape = SubResource( 2 )
 
 [node name="Bullet" type="Position2D" parent="."]
 position = Vector2( 65.6296, 50.5413 )

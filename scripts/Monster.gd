@@ -9,7 +9,7 @@ var crouching = false
 var in_area = 0
 var facing_right = true
 
-var health = 100 setget set_health
+var health = 30 setget set_health
 
 var Bullet = preload("res://scenes/Bullet.tscn")
 onready var playback = $AnimationTree.get("parameters/playback")
@@ -53,7 +53,6 @@ func _physics_process(delta):
 	var attacking_press = Input.is_action_pressed("attack")
 	var attacking_released = Input.is_action_just_released("attack")
 	var jumping = Input.is_action_just_pressed("jump")
-	var crouch_pressed = Input.is_action_pressed("crouch")
 	
 	if attacking_press and on_floor: 
 		linear_vel.x = 0
@@ -62,13 +61,14 @@ func _physics_process(delta):
 			can_double_jump = false
 		linear_vel.y = -speed
 		
-	if health >= 90:
+	if health >= 50:
 		if on_floor:
 			can_double_jump = true
 			if linear_vel.length_squared() > 10:
 				playback.travel("run 100")
 			if linear_vel.length_squared() <= 10:
 				playback.travel("idle 100")
+			var crouch_pressed = Input.is_action_pressed("crouch")
 			if crouching or crouch_pressed:
 				crouching = true
 				playback.travel("crouch 100")
@@ -95,13 +95,14 @@ func _physics_process(delta):
 			$Bullet.position.x = -$Bullet.position.x
 			facing_right = true
 	
-	elif 89 >= health and health > 0:
+	elif 0 < health and health <= 49:
 		if on_floor:
 			can_double_jump = true
 			if linear_vel.length_squared() > 10:
 				playback.travel("run 20")
 			if linear_vel.length_squared() <= 10:
 				playback.travel("idle 20")
+			var crouch_pressed = Input.is_action_pressed("crouch")
 			if crouching or crouch_pressed:
 				crouching = true
 				playback.travel("crouch 20")
@@ -137,7 +138,7 @@ func fire():
 	get_parent().add_child(bullet)
 	bullet.rotation = 0 if facing_right else PI
 	bullet.global_position = $Bullet.global_position
-	set_health(health - 3)
+	set_health(health - 10)
 
 func take_damage(damage):
 	if not $Timer.is_stopped():

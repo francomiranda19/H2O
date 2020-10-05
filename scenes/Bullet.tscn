@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 288.718, 150.886 )
 
-[node name="Bullet" type="Area2D"]
+[node name="Bullet" type="Area2D" groups=[
+"shoot",
+]]
 script = ExtResource( 2 )
 
 [node name="Bullet" type="Sprite" parent="."]
