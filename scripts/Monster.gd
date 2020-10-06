@@ -9,7 +9,7 @@ var crouching = false
 var in_area = 0
 var facing_right = true
 
-var health = 30 setget set_health
+var health = 100 setget set_health
 
 var Bullet = preload("res://scenes/Bullet.tscn")
 onready var playback = $AnimationTree.get("parameters/playback")
