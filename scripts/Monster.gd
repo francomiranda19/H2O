@@ -71,6 +71,7 @@ func _physics_process(delta):
 			var crouch_pressed = Input.is_action_pressed("crouch")
 			if crouching or crouch_pressed:
 				crouching = true
+				linear_vel.x = 0
 				playback.travel("crouch 100")
 			if crouching and not crouch_pressed:
 				check_crouch()
