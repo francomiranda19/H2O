@@ -17,6 +17,7 @@ onready var playback = $AnimationTree.get("parameters/playback")
 func set_health(value):
 	health = clamp(value, 0, 100)
 	$CanvasLayer/HealthBar.value = value
+	$AnimationTree.set("parameters/%s/blend_position" % playback.get_current_node(), Vector2(health, 0))
 	
 func check_crouch():
 	if in_area == 0:
@@ -38,6 +39,10 @@ func _ready():
 	
 func on_timeout():
 	modulate.a = 1
+	
+func travel(animation):
+	$AnimationTree.set("parameters/%s/blend_position" % animation, Vector2(health, 0))
+	playback.travel(animation)
 	
 func _physics_process(delta):
 	linear_vel.y += g * delta
@@ -61,84 +66,52 @@ func _physics_process(delta):
 			can_double_jump = false
 		linear_vel.y = -speed
 		
-	if health >= 50:
-		if on_floor:
-			can_double_jump = true
-			if linear_vel.length_squared() > 10:
-				playback.travel("run 100")
-			if linear_vel.length_squared() <= 10:
-				playback.travel("idle 100")
-			var crouch_pressed = Input.is_action_pressed("crouch")
-			if crouching or crouch_pressed:
-				crouching = true
+	if on_floor:
+		can_double_jump = true
+		if linear_vel.length_squared() > 10:
+			travel("run")
+		if linear_vel.length_squared() <= 10:
+			travel("idle")
+		var crouch_pressed = Input.is_action_pressed("crouch")
+		if crouching or crouch_pressed:
+			crouching = true
+			if health > 50:
 				linear_vel.x = 0
-				playback.travel("crouch 100")
-			if crouching and not crouch_pressed:
-				check_crouch()
+			travel("crouch")
+		if crouching and not crouch_pressed:
+			check_crouch()
+	else:
+		if linear_vel.y > 0:
+			travel("fall")
 		else:
-			if linear_vel.y > 0:
-				playback.travel("fall 100")
-			else:
-				playback.travel("jump 100")
-				
-		if in_area == 0:
-			if attacking_press:
-				playback.travel("attack_start 100")
-			if attacking_released:
-				playback.travel("attack 100")
-				
-		if facing_right and target_vel.x < 0:
-			$Sprite.flip_h = true
-			$Bullet.position.x = -$Bullet.position.x
-			facing_right = false
-		if not facing_right and target_vel.x > 0:
-			$Sprite.flip_h = false
-			$Bullet.position.x = -$Bullet.position.x
-			facing_right = true
-	
-	elif 0 < health and health <= 49:
-		if on_floor:
-			can_double_jump = true
-			if linear_vel.length_squared() > 10:
-				playback.travel("run 20")
-			if linear_vel.length_squared() <= 10:
-				playback.travel("idle 20")
-			var crouch_pressed = Input.is_action_pressed("crouch")
-			if crouching or crouch_pressed:
-				crouching = true
-				playback.travel("crouch 20")
-			if crouching and not crouch_pressed:
-				check_crouch()
-		else:
-			if linear_vel.y > 0:
-				playback.travel("fall 20")
-			else:
-				playback.travel("jump 20")
-				
-		if in_area == 0:
-			if attacking_press:
-				playback.travel("attack_start 20")
-			if attacking_released:
-				playback.travel("attack 20")
-				
-		if facing_right and target_vel.x < 0:
-			$Sprite.flip_h = true
-			$Bullet.position.x = -$Bullet.position.x
-			facing_right = false
-		if not facing_right and target_vel.x > 0:
-			$Sprite.flip_h = false
-			$Bullet.position.x = -$Bullet.position.x
-			facing_right = true
+			travel("jump")
 			
-	elif health <= 0:
-		playback.travel("death 20")
+	if in_area == 0:
+		if attacking_press:
+			travel("attack_start")
+		if attacking_released:
+			travel("attack")
+			
+	if facing_right and target_vel.x < 0:
+		$Sprite.flip_h = true
+		facing_right = false
+	if not facing_right and target_vel.x > 0:
+		$Sprite.flip_h = false
+		facing_right = true
+			
+	if health <= 0:
+		travel("death")
 		linear_vel = Vector2(0, 300)
 			
 func fire():
 	var bullet = Bullet.instance()
 	get_parent().add_child(bullet)
+	bullet.scale = 5 * Vector2.ONE if health > 50 else Vector2.ONE
 	bullet.rotation = 0 if facing_right else PI
-	bullet.global_position = $Bullet.global_position
+	var bullet_position = global_position
+	bullet_position.x += ($Bullet.position.x if facing_right else -$Bullet.position.x) * scale.x
+	bullet_position.y += $Bullet.position.y * scale.y
+	bullet.global_position = bullet_position
 	set_health(health - 10)
 
 func take_damage(damage):
