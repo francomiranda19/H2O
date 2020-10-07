@@ -17,7 +17,6 @@ onready var playback = $AnimationTree.get("parameters/playback")
 func set_health(value):
 	health = clamp(value, 0, 100)
 	$CanvasLayer/HealthBar.value = value
-	$AnimationTree.set("parameters/%s/blend_position" % playback.get_current_node(), Vector2(health, 0))
 	
 func check_crouch():
 	if in_area == 0:
@@ -35,7 +34,7 @@ func on_body_exited(body: Node):
 func _ready():
 	$Area2D.connect("body_entered", self, "on_body_entered")
 	$Area2D.connect("body_exited", self, "on_body_exited")
-	$Timer.connect("timeout",self,"on_timeout")
+	$Timer.connect("timeout",self, "on_timeout")
 	
 func on_timeout():
 	modulate.a = 1
@@ -58,6 +57,7 @@ func _physics_process(delta):
 	var attacking_press = Input.is_action_pressed("attack")
 	var attacking_released = Input.is_action_just_released("attack")
 	var jumping = Input.is_action_just_pressed("jump")
+	var crouch_pressed = Input.is_action_pressed("crouch")
 	
 	if attacking_press and on_floor: 
 		linear_vel.x = 0
@@ -72,11 +72,12 @@ func _physics_process(delta):
 			travel("run")
 		if linear_vel.length_squared() <= 10:
 			travel("idle")
-		var crouch_pressed = Input.is_action_pressed("crouch")
 		if crouching or crouch_pressed:
 			crouching = true
 			if health > 50:
 				linear_vel.x = 0
+			$AnimationTree.set("parameters/crouch_start/blend_position", Vector2(health, 0))
+			$AnimationTree.set("parameters/crouch_start 2/blend_position", Vector2(health, 0))
 			travel("crouch")
 		if crouching and not crouch_pressed:
 			check_crouch()
@@ -84,6 +85,7 @@ func _physics_process(delta):
 		if linear_vel.y > 0:
 			travel("fall")
 		else:
+			$AnimationTree.set("parameters/jump_start/blend_position", Vector2(health, 0))
 			travel("jump")
 			
 	if in_area == 0:

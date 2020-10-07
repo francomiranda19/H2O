@@ -10,7 +10,7 @@ func _ready():
 	set_process(false) 
 	
 func _process(delta):
-	$Sprite.position = Vector2(randf(),randf())*10
+	$Sprite.position = Vector2(randf(), randf()) * 10
 	acc_time += delta
 	if acc_time > animation_time:
 		$Sprite.position = Vector2()

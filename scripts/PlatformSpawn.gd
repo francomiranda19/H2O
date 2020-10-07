@@ -21,7 +21,7 @@ func set_time(value):
 func set_offset(value):
 	offset = value
 	for i in get_child_count():
-		get_child(i).offset = offset*i
+		get_child(i).offset = offset * i
 	update()
 
 func set_amount(value):
@@ -30,21 +30,21 @@ func set_amount(value):
 	amount = value
 	var child_count = get_child_count()
 	if amount > child_count:
-		for i in range(amount-child_count):
+		for i in range(amount - child_count):
 			var platform = Platform.instance()
 			platform.time = time
-			platform.offset = offset*(child_count+i)
+			platform.offset = offset * (child_count + i)
 			add_child(platform)
-			platform.position.x = separation*(child_count+i)
+			platform.position.x = separation * (child_count + i)
 	if amount < child_count:
-		for i in range(child_count-amount):
-			remove_child(get_child(child_count-1-i))
+		for i in range(child_count - amount):
+			remove_child(get_child(child_count - 1 - i))
 	update()
 	
 func set_separation(value):
 	separation = value
 	for i in get_child_count():
-		get_child(i).position.x = separation*i
+		get_child(i).position.x = separation * i
 	
 func update():
 	if is_ready:
