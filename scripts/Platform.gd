@@ -37,13 +37,13 @@ func on_timeout():
 		$Timer.start()
 	else:
 		$Fire.visible = !$Fire.visible
+		$Area2D/Fuego.disabled = !$Area2D/Fuego.disabled
 	
 func _physics_process(delta):
 	if $Fire.visible:
 		for body in bodies:
 			if body.has_method("take_damage"):
 				body.take_damage(5)
-	
 
 func on_body_entered(body: Node):
 	bodies.append(body)

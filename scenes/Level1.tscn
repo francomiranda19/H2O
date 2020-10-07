@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/Cage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://textures/level2/background/BurnedGround_S.jpg" type="Texture" id=11]
 [ext_resource path="res://scenes/ChangeLevel.tscn" type="PackedScene" id=12]
 [ext_resource path="res://textures/level1/Space.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Level1.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.652, 10.6594 )
@@ -64,9 +65,9 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 13 )
 
 [node name="Background" type="TextureRect" parent="."]
-margin_left = -322.0
+margin_left = -1892.0
 margin_top = -3779.0
-margin_right = 58016.0
+margin_right = 59061.0
 margin_bottom = 9486.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
@@ -100,8 +101,7 @@ rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="Startwall" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2( -726.17, 16.819 )
+position = Vector2( -1351.75, 16.819 )
 shape = SubResource( 3 )
 
 [node name="Wall" type="CollisionShape2D" parent="StaticBody2D"]
@@ -265,9 +265,9 @@ __meta__ = {
 [node name="Ground" type="TextureRect" parent="StaticBody2D"]
 modulate = Color( 0.341176, 0.388235, 0.862745, 1 )
 anchor_bottom = 1.0
-margin_left = -403.238
+margin_left = -2040.0
 margin_top = 268.0
-margin_right = 4477.76
+margin_right = 6113.0
 margin_bottom = 2316.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
@@ -430,8 +430,13 @@ stream = ExtResource( 8 )
 volume_db = -15.0
 autoplay = true
 
+[node name="Instrucciones" type="Sprite" parent="."]
+position = Vector2( 305.704, 275.433 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 14 )
+
 [node name="Cage" parent="." instance=ExtResource( 1 )]
-position = Vector2( 256.559, 373.443 )
+position = Vector2( -96.8753, 373.443 )
 
 [node name="PlatformSpawn" parent="." instance=ExtResource( 6 )]
 position = Vector2( 10127.4, 1133.04 )

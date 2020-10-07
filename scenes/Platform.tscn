@@ -34,8 +34,10 @@ position = Vector2( -4.5, 84 )
 shape = SubResource( 1 )
 
 [node name="Fire" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 13.0315, -551.623 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
@@ -43,6 +45,7 @@ wait_time = 5.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Fuego" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -518.479 )
 shape = SubResource( 3 )
+disabled = true
