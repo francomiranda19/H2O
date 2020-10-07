@@ -40,10 +40,26 @@ func on_timeout():
 	modulate.a = 1
 	
 func travel(animation):
-	$AnimationTree.set("parameters/%s/blend_position" % animation, Vector2(health, 0))
 	playback.travel(animation)
 	
+func set_animation(animation):
+	$AnimationTree.set("parameters/%s/blend_position" % animation, Vector2(health, 0))
+	
+func set_animations():
+	set_animation("attack")
+	set_animation("attack_start")
+	set_animation("crouch")
+	set_animation("crouch_start")
+	set_animation("crouch_start 2")
+	set_animation("fall")
+	set_animation("idle")
+	set_animation("jump")
+	set_animation("jump_start")
+	set_animation("run")
+	
 func _physics_process(delta):
+	set_animations()
+	
 	linear_vel.y += g * delta
 	linear_vel = move_and_slide(linear_vel, Vector2.UP)
 	var on_floor = is_on_floor()
@@ -76,8 +92,6 @@ func _physics_process(delta):
 			crouching = true
 			if health > 50:
 				linear_vel.x = 0
-			$AnimationTree.set("parameters/crouch_start/blend_position", Vector2(health, 0))
-			$AnimationTree.set("parameters/crouch_start 2/blend_position", Vector2(health, 0))
 			travel("crouch")
 		if crouching and not crouch_pressed:
 			check_crouch()
@@ -85,7 +99,6 @@ func _physics_process(delta):
 		if linear_vel.y > 0:
 			travel("fall")
 		else:
-			$AnimationTree.set("parameters/jump_start/blend_position", Vector2(health, 0))
 			travel("jump")
 			
 	if in_area == 0:
@@ -93,17 +106,17 @@ func _physics_process(delta):
 			travel("attack_start")
 		if attacking_released:
 			travel("attack")
-			
-	if facing_right and target_vel.x < 0:
-		$Sprite.flip_h = true
-		facing_right = false
-	if not facing_right and target_vel.x > 0:
-		$Sprite.flip_h = false
-		facing_right = true
-			
+	
 	if health <= 0:
 		travel("death")
 		linear_vel = Vector2(0, 300)
+			
+	if facing_right and target_vel.x < 0 and health > 0:
+		$Sprite.flip_h = true
+		facing_right = false
+	if not facing_right and target_vel.x > 0 and health > 0:
+		$Sprite.flip_h = false
+		facing_right = true
 			
 func fire():
 	var bullet = Bullet.instance()
