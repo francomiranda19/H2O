@@ -1265,7 +1265,7 @@ tracks/11/keys = {
 }
 
 [sub_resource type="Animation" id=11]
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -2910,12 +2910,13 @@ font_data = ExtResource( 36 )
 "player",
 ]]
 scale = Vector2( 0.5, 0.5 )
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.093, -0.572 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 5 )
+position = Vector2( 3.7097, -348.281 )
+texture = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.11586, -358.141 )
