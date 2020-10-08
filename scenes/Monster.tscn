@@ -39,11 +39,11 @@
 [ext_resource path="res://sprites/health/life.png" type="Texture" id=37]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 53.911
-height = 51.7981
+radius = 66.299
+height = 48.9767
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 48.316, 25.2952 )
+extents = Vector2( 259.341, 104.903 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "attack 100"
@@ -2918,7 +2918,8 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.85168, 15.8991 )
+position = Vector2( -1.11586, -358.141 )
+scale = Vector2( 5, 5 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -2945,16 +2946,16 @@ tree_root = SubResource( 97 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 98 )
-parameters/attack/blend_position = Vector2( 43.6037, 0.0107527 )
-parameters/attack_start/blend_position = Vector2( 40.6396, 0.00129032 )
-parameters/crouch/blend_position = Vector2( 44.3838, 0.00387096 )
-parameters/crouch_start/blend_position = Vector2( 42.9017, 0.0107527 )
-"parameters/crouch_start 2/blend_position" = Vector2( 43.1357, 0.00903225 )
-parameters/fall/blend_position = Vector2( 41.1856, -0.00129032 )
-parameters/idle/blend_position = Vector2( 47.4259, 0.00358415 )
-parameters/jump/blend_position = Vector2( 41.8097, -0.00129032 )
-parameters/jump_start/blend_position = Vector2( 41.8877, 0.00129032 )
-parameters/run/blend_position = Vector2( 47.1139, 0.00129032 )
+parameters/attack/blend_position = Vector2( 100, 0.011 )
+parameters/attack_start/blend_position = Vector2( 100, 0.001 )
+parameters/crouch/blend_position = Vector2( 100, 0.004 )
+parameters/crouch_start/blend_position = Vector2( 100, 0.011 )
+"parameters/crouch_start 2/blend_position" = Vector2( 100, 0.009 )
+parameters/fall/blend_position = Vector2( 100, -0.001 )
+parameters/idle/blend_position = Vector2( 100, 0.004 )
+parameters/jump/blend_position = Vector2( 100, -0.001 )
+parameters/jump_start/blend_position = Vector2( 100, 0.001 )
+parameters/run/blend_position = Vector2( 100, 0.001 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1170.89, -534.219 )
@@ -2964,7 +2965,7 @@ limit_left = -650
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0.523, -31.408 )
+position = Vector2( -0.534988, -688.46 )
 shape = SubResource( 2 )
 
 [node name="Bullet" type="Position2D" parent="."]
