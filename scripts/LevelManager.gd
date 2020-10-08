@@ -7,3 +7,6 @@ func next():
 
 func change_scene(scene):
 	Game.change_scene(scene)
+
+func reset():
+	Game.reset()

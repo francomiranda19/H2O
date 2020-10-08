@@ -36,3 +36,8 @@ func on_faded():
 		$World.add_child(current_world)
 		loading = false
 		$CanvasLayer/FadeInOut.fade_out()
+		
+func reset():
+	current_level = 0
+	loading = true
+	$CanvasLayer/FadeInOut.fade_in()

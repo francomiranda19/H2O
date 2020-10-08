@@ -9,6 +9,9 @@ var crouching = false
 var in_area = 0
 var facing_right = true
 
+export var num_lives = 2
+onready var lives_label = $CanvasLayer2/Panel/MarginContainer/HBoxContainer/Label2
+
 var health = 100 setget set_health
 
 var Bullet = preload("res://scenes/Bullet.tscn")
@@ -32,6 +35,7 @@ func on_body_exited(body: Node):
 		check_crouch()
 	
 func _ready():
+	lives_label.text = String(num_lives)
 	$Area2D.connect("body_entered", self, "on_body_entered")
 	$Area2D.connect("body_exited", self, "on_body_exited")
 	$Timer.connect("timeout",self, "on_timeout")
@@ -143,3 +147,14 @@ func heal(amount):
 		self.health += amount
 		$Timer.start()
 		modulate.a = 0.5
+		
+func reduce_life():
+	if num_lives <= 0:
+		LevelManager.reset()
+		return
+	self.health = 60 
+	num_lives -= 1
+	lives_label.text = String(num_lives)
+	if get_parent().has_method("teleport_checkpoint"):
+		get_parent().teleport_checkpoint(self)
+	
