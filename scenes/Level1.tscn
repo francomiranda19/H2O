@@ -472,4 +472,4 @@ position = Vector2( 22685.7, 1137.91 )
 position = Vector2( 27959.5, 1137.91 )
 
 [node name="ChangeLevel" parent="." instance=ExtResource( 12 )]
-position = Vector2( 30283, 5864.42 )
+position = Vector2( 31013.5, 5213.92 )
