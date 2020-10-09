@@ -9,5 +9,6 @@ script = ExtResource( 2 )
 [node name="World" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
 
 [node name="FadeInOut" parent="CanvasLayer" instance=ExtResource( 1 )]
