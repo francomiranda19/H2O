@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/level2/background/city_background_clean.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://music/level2/Ambient.wav" type="AudioStream" id=11]
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/ChangeLevel.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 2048, 2048, 0, 2048, 0, 0, 2048, 0 )
@@ -118,6 +119,10 @@ extents = Vector2( 186.582, 345.642 )
 [sub_resource type="RectangleShape2D" id=9]
 resource_local_to_scene = true
 extents = Vector2( 186.582, 195.658 )
+
+[sub_resource type="RectangleShape2D" id=10]
+resource_local_to_scene = true
+extents = Vector2( 172.646, 250.82 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -274,8 +279,16 @@ position = Vector2( 377, 326.407 )
 [node name="CollisionShape2D" parent="Node2D/Checkpoint3" index="1"]
 shape = SubResource( 9 )
 
+[node name="ChangeLevel" parent="." instance=ExtResource( 14 )]
+
+[node name="CollisionShape2D" parent="ChangeLevel/Area2D" index="0"]
+position = Vector2( 9619.48, 212.599 )
+shape = SubResource( 10 )
+
 [editable path="Node2D/Checkpoint"]
 
 [editable path="Node2D/Checkpoint2"]
 
 [editable path="Node2D/Checkpoint3"]
+
+[editable path="ChangeLevel"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://videos/GameOver.ogv" type="VideoStream" id=1]
+[ext_resource path="res://scripts/GameOver.gd" type="Script" id=2]
+
+[node name="Death" type="Control"]
+margin_right = 30.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="VideoPlayer" parent="."]
+anchor_right = 64.0
+anchor_bottom = 33.75
+margin_right = 0.00012207
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="finished" from="GameOver" to="GameOver" method="_on_GameOver_finished"]

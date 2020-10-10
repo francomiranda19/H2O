@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://videos/Gracias.ogv" type="VideoStream" id=1]
+[ext_resource path="res://scripts/Fin.gd" type="Script" id=2]
+
+[node name="Gracias" type="Control"]
+anchor_right = 0.031
+anchor_bottom = 0.053
+margin_right = 0.479996
+margin_bottom = -0.240002
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fin" type="VideoPlayer" parent="."]
+anchor_right = 32.0
+anchor_bottom = 18.947
+margin_right = 0.00012207
+margin_bottom = 0.0209961
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="finished" from="Fin" to="Fin" method="_on_Fin_finished"]

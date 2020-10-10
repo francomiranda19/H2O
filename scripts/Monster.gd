@@ -150,7 +150,7 @@ func heal(amount):
 		
 func reduce_life():
 	if num_lives <= 0:
-		LevelManager.reset()
+		LevelManager.change_scene("res://scenes/Death.tscn")
 		return
 	self.health = 60 
 	num_lives -= 1
