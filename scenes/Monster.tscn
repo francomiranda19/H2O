@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=2]
+[gd_scene load_steps=136 format=2]
 
 [ext_resource path="res://sprites/20/idle/Idle_1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/20/idle/Idle_2.png" type="Texture" id=2]
@@ -2836,6 +2836,7 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=88]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=89]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=90]
 switch_mode = 2
@@ -2844,17 +2845,10 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=92]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=93]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=94]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=95]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=96]
-
-[sub_resource type="AnimationNodeStateMachine" id=97]
+[sub_resource type="AnimationNodeStateMachine" id=94]
 states/attack/node = SubResource( 22 )
 states/attack/position = Vector2( 360.77, 398.668 )
 states/attack_start/node = SubResource( 25 )
@@ -2877,14 +2871,14 @@ states/jump_start/node = SubResource( 47 )
 states/jump_start/position = Vector2( 360.77, -346.492 )
 states/run/node = SubResource( 50 )
 states/run/position = Vector2( -280.912, -325.906 )
-transitions = [ "idle", "run", SubResource( 51 ), "run", "idle", SubResource( 52 ), "jump_start", "jump", SubResource( 53 ), "jump_start", "death", SubResource( 54 ), "run", "jump_start", SubResource( 55 ), "idle", "jump_start", SubResource( 56 ), "jump", "fall", SubResource( 57 ), "fall", "jump", SubResource( 58 ), "jump", "attack_start", SubResource( 59 ), "attack_start", "jump", SubResource( 60 ), "jump", "death", SubResource( 61 ), "jump", "crouch_start", SubResource( 62 ), "crouch_start 2", "jump", SubResource( 63 ), "attack", "jump", SubResource( 64 ), "run", "death", SubResource( 65 ), "idle", "death", SubResource( 66 ), "crouch_start", "death", SubResource( 67 ), "crouch", "death", SubResource( 68 ), "crouch_start 2", "death", SubResource( 69 ), "attack", "death", SubResource( 70 ), "attack_start", "death", SubResource( 71 ), "fall", "death", SubResource( 72 ), "fall", "attack_start", SubResource( 73 ), "attack_start", "fall", SubResource( 74 ), "fall", "run", SubResource( 75 ), "run", "fall", SubResource( 76 ), "fall", "idle", SubResource( 77 ), "idle", "fall", SubResource( 78 ), "crouch", "fall", SubResource( 79 ), "attack", "fall", SubResource( 80 ), "attack", "run", SubResource( 81 ), "attack", "idle", SubResource( 82 ), "attack", "crouch_start", SubResource( 83 ), "attack_start", "attack", SubResource( 84 ), "crouch", "crouch_start 2", SubResource( 85 ), "crouch_start", "crouch", SubResource( 86 ), "idle", "crouch_start", SubResource( 87 ), "run", "crouch_start", SubResource( 88 ), "attack_start", "crouch_start", SubResource( 89 ), "crouch_start 2", "idle", SubResource( 90 ), "crouch_start 2", "run", SubResource( 91 ), "crouch_start 2", "attack_start", SubResource( 92 ), "attack_start", "idle", SubResource( 93 ), "idle", "attack_start", SubResource( 94 ), "attack_start", "run", SubResource( 95 ), "run", "attack_start", SubResource( 96 ) ]
+transitions = [ "idle", "run", SubResource( 51 ), "run", "idle", SubResource( 52 ), "jump_start", "jump", SubResource( 53 ), "jump_start", "death", SubResource( 54 ), "run", "jump_start", SubResource( 55 ), "idle", "jump_start", SubResource( 56 ), "jump", "fall", SubResource( 57 ), "fall", "jump", SubResource( 58 ), "jump", "attack_start", SubResource( 59 ), "attack_start", "jump", SubResource( 60 ), "jump", "death", SubResource( 61 ), "jump", "crouch_start", SubResource( 62 ), "crouch_start 2", "jump", SubResource( 63 ), "attack", "jump", SubResource( 64 ), "run", "death", SubResource( 65 ), "idle", "death", SubResource( 66 ), "crouch_start", "death", SubResource( 67 ), "crouch", "death", SubResource( 68 ), "crouch_start 2", "death", SubResource( 69 ), "attack", "death", SubResource( 70 ), "attack_start", "death", SubResource( 71 ), "fall", "death", SubResource( 72 ), "fall", "attack_start", SubResource( 73 ), "attack_start", "fall", SubResource( 74 ), "fall", "run", SubResource( 75 ), "run", "fall", SubResource( 76 ), "fall", "idle", SubResource( 77 ), "idle", "fall", SubResource( 78 ), "crouch", "fall", SubResource( 79 ), "attack", "fall", SubResource( 80 ), "attack", "run", SubResource( 81 ), "attack", "idle", SubResource( 82 ), "attack", "crouch_start", SubResource( 83 ), "attack_start", "attack", SubResource( 84 ), "crouch", "crouch_start 2", SubResource( 85 ), "crouch_start", "crouch", SubResource( 86 ), "idle", "crouch_start", SubResource( 87 ), "run", "crouch_start", SubResource( 88 ), "crouch_start 2", "idle", SubResource( 89 ), "crouch_start 2", "run", SubResource( 90 ), "crouch_start 2", "attack_start", SubResource( 91 ), "idle", "attack_start", SubResource( 92 ), "run", "attack_start", SubResource( 93 ) ]
 start_node = "idle"
 end_node = "death"
-graph_offset = Vector2( -578.587, -305.016 )
+graph_offset = Vector2( -578.587, -372.571 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=98]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=95]
 
-[sub_resource type="StyleBoxFlat" id=99]
+[sub_resource type="StyleBoxFlat" id=96]
 bg_color = Color( 0.141176, 0.666667, 0.568627, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -2896,12 +2890,12 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 20
 
-[sub_resource type="DynamicFont" id=100]
+[sub_resource type="DynamicFont" id=97]
 size = 128
 use_filter = true
 font_data = ExtResource( 36 )
 
-[sub_resource type="DynamicFont" id=101]
+[sub_resource type="DynamicFont" id=98]
 size = 128
 use_filter = true
 font_data = ExtResource( 36 )
@@ -2916,9 +2910,10 @@ script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 3.7097, -348.281 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -1.11586, -358.141 )
 scale = Vector2( 5, 5 )
 shape = SubResource( 1 )
@@ -2943,10 +2938,10 @@ shape = SubResource( 1 )
 "anims/run 20" = SubResource( 19 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 97 )
+tree_root = SubResource( 94 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 98 )
+parameters/playback = SubResource( 95 )
 parameters/attack/blend_position = Vector2( 100, 0.011 )
 parameters/attack_start/blend_position = Vector2( 100, 0.001 )
 parameters/crouch/blend_position = Vector2( 100, 0.004 )
@@ -2966,6 +2961,7 @@ limit_left = -650
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2( -0.534988, -688.46 )
 shape = SubResource( 2 )
 
@@ -3009,7 +3005,7 @@ margin_left = 140.0
 margin_top = 5.0
 margin_right = 268.0
 margin_bottom = 132.0
-custom_styles/panel = SubResource( 99 )
+custom_styles/panel = SubResource( 96 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -3039,7 +3035,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="CanvasLayer2/Panel/MarginContainer/HBoxContainer"]
 margin_right = 57.0
 margin_bottom = 127.0
-custom_fonts/font = SubResource( 100 )
+custom_fonts/font = SubResource( 97 )
 text = "x"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3049,7 +3045,7 @@ __meta__ = {
 margin_left = 61.0
 margin_right = 111.0
 margin_bottom = 127.0
-custom_fonts/font = SubResource( 101 )
+custom_fonts/font = SubResource( 98 )
 text = "3"
 __meta__ = {
 "_edit_use_anchors_": false
