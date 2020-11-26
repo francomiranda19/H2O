@@ -125,7 +125,13 @@ func _physics_process(delta):
 func fire():
 	var bullet = Bullet.instance()
 	get_parent().add_child(bullet)
-	bullet.scale = 5 * Vector2.ONE if health > 50 else Vector2.ONE
+	if health > 70:
+		bullet.scale = 5 * Vector2.ONE
+	elif 20 < health and health <= 70:
+		bullet.scale = 2 * Vector2.ONE
+	else:
+		bullet.scale = Vector2.ONE
+		
 	bullet.rotation = 0 if facing_right else PI
 	var bullet_position = global_position
 	bullet_position.x += ($Bullet.position.x if facing_right else -$Bullet.position.x) * scale.x
@@ -157,4 +163,3 @@ func reduce_life():
 	lives_label.text = String(num_lives)
 	if get_parent().has_method("teleport_checkpoint"):
 		get_parent().teleport_checkpoint(self)
-	

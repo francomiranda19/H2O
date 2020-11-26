@@ -12,4 +12,3 @@ func on_player_entered(checkpoint):
 
 func teleport_checkpoint(player):
 	player.global_position = current_checkpoint.get_node("Spawn").global_position
-		 
