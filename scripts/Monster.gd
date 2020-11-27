@@ -94,7 +94,7 @@ func _physics_process(delta):
 			travel("idle")
 		if crouching or crouch_pressed:
 			crouching = true
-			if health > 50:
+			if health > 20:
 				linear_vel.x = 0
 			travel("crouch")
 		if crouching and not crouch_pressed:
