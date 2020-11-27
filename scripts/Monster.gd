@@ -127,7 +127,9 @@ func fire():
 	get_parent().add_child(bullet)
 	if health > 70:
 		bullet.scale = 5 * Vector2.ONE
-	elif 20 < health and health <= 70:
+	elif 40 < health and health <= 70:
+		bullet.scale = 3.5 * Vector2.ONE
+	elif 20 < health and health <= 40:
 		bullet.scale = 2 * Vector2.ONE
 	else:
 		bullet.scale = Vector2.ONE
@@ -137,7 +139,7 @@ func fire():
 	bullet_position.x += ($Bullet.position.x if facing_right else -$Bullet.position.x) * scale.x
 	bullet_position.y += $Bullet.position.y * scale.y
 	bullet.global_position = bullet_position
-	set_health(health - 10)
+	set_health(health - 9)
 
 func take_damage(damage):
 	if not $Timer.is_stopped():
