@@ -470,7 +470,7 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 14 )
 
 [node name="Cage" parent="." instance=ExtResource( 1 )]
-position = Vector2( 27635.4, 920.478 )
+position = Vector2( -96.875, 373.443 )
 
 [node name="PlatformSpawn" parent="." instance=ExtResource( 6 )]
 position = Vector2( 10127.4, 1133.04 )

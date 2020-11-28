@@ -9,7 +9,7 @@ var crouching = false
 var in_area = 0
 var facing_right = true
 
-export var num_lives = 2
+export var num_lives = 4
 onready var lives_label = $CanvasLayer2/Panel/MarginContainer/HBoxContainer/Label2
 
 var health = 100 setget set_health
