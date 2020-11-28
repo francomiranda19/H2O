@@ -9,7 +9,7 @@
 [ext_resource path="res://textures/level2/rain/rain_drops-03.png" type="Texture" id=7]
 [ext_resource path="res://textures/level2/background/BurnedGround_S.jpg" type="Texture" id=8]
 [ext_resource path="res://textures/level2/background/Stairs.png" type="Texture" id=9]
-[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Cop.tscn" type="PackedScene" id=10]
 [ext_resource path="res://music/level2/Ambient.wav" type="AudioStream" id=11]
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=13]
@@ -198,50 +198,62 @@ anims/rain = SubResource( 7 )
 [node name="Enemy" parent="." instance=ExtResource( 10 )]
 position = Vector2( 2109.28, 276.253 )
 scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
 
 [node name="Enemy2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2461.12, 147.055 )
+position = Vector2( 2423.26, 147.339 )
 scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
 
 [node name="Enemy3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 2792.1, 20.7381 )
 scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
 
 [node name="Enemy4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3101.64, -105.46 )
 scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
 
 [node name="Enemy5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 5043.62, -676.775 )
 scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
 
 [node name="Enemy6" parent="." instance=ExtResource( 10 )]
 position = Vector2( 4565.61, -549.483 )
 scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
 
 [node name="Enemy7" parent="." instance=ExtResource( 10 )]
 position = Vector2( 9072.67, 341.169 )
 scale = Vector2( 9, 4 )
+target = NodePath("../Monster")
 
 [node name="Enemy8" parent="." instance=ExtResource( 10 )]
 position = Vector2( 8942.29, 340.13 )
 scale = Vector2( 6, 4 )
+target = NodePath("../Monster")
 
 [node name="Enemy9" parent="." instance=ExtResource( 10 )]
 position = Vector2( 8861.33, 346.951 )
 scale = Vector2( 2, 4 )
+target = NodePath("../Monster")
 
 [node name="Enemy10" parent="." instance=ExtResource( 10 )]
 position = Vector2( 8121.21, 345.66 )
 scale = Vector2( 8, 4 )
+target = NodePath("../Monster")
 
 [node name="Enemy11" parent="." instance=ExtResource( 10 )]
 position = Vector2( 8264.17, 344.239 )
 scale = Vector2( 4, 4 )
+target = NodePath("../Monster")
 
 [node name="Enemy12" parent="." instance=ExtResource( 10 )]
 position = Vector2( 7993.02, 343.194 )
 scale = Vector2( 6, 4 )
+target = NodePath("../Monster")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

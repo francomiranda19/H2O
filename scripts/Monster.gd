@@ -14,7 +14,7 @@ onready var lives_label = $CanvasLayer2/Panel/MarginContainer/HBoxContainer/Labe
 
 var health = 100 setget set_health
 
-var Bullet = preload("res://scenes/Bullet.tscn")
+var Bullet = preload("res://scenes/MonsterBullet.tscn")
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func set_health(value):
@@ -94,7 +94,7 @@ func _physics_process(delta):
 			travel("idle")
 		if crouching or crouch_pressed:
 			crouching = true
-			if health > 50:
+			if health > 20:
 				linear_vel.x = 0
 			travel("crouch")
 		if crouching and not crouch_pressed:
@@ -125,13 +125,21 @@ func _physics_process(delta):
 func fire():
 	var bullet = Bullet.instance()
 	get_parent().add_child(bullet)
-	bullet.scale = 5 * Vector2.ONE if health > 50 else Vector2.ONE
+	if health > 70:
+		bullet.scale = 5 * Vector2.ONE
+	elif 40 < health and health <= 70:
+		bullet.scale = 3.5 * Vector2.ONE
+	elif 20 < health and health <= 40:
+		bullet.scale = 2 * Vector2.ONE
+	else:
+		bullet.scale = Vector2.ONE
+		
 	bullet.rotation = 0 if facing_right else PI
 	var bullet_position = global_position
 	bullet_position.x += ($Bullet.position.x if facing_right else -$Bullet.position.x) * scale.x
 	bullet_position.y += $Bullet.position.y * scale.y
 	bullet.global_position = bullet_position
-	set_health(health - 10)
+	set_health(health - 9)
 
 func take_damage(damage):
 	if not $Timer.is_stopped():
@@ -157,4 +165,3 @@ func reduce_life():
 	lives_label.text = String(num_lives)
 	if get_parent().has_method("teleport_checkpoint"):
 		get_parent().teleport_checkpoint(self)
-	
