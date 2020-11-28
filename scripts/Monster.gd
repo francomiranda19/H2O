@@ -53,6 +53,7 @@ func on_continue_pressed():
 func on_exit_pressed():
 	$AudioStreamPlayer2D.play()
 	LevelManager.reset()
+	get_tree().paused = false
 	
 func travel(animation):
 	playback.travel(animation)

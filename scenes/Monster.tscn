@@ -5553,11 +5553,11 @@ font_data = ExtResource( 36 )
 size = 128
 font_data = ExtResource( 36 )
 
-[sub_resource type="StyleBoxTexture" id=157]
+[sub_resource type="StyleBoxTexture" id=156]
 texture = ExtResource( 62 )
 region_rect = Rect2( 0, 0, 608, 342 )
 
-[sub_resource type="DynamicFont" id=156]
+[sub_resource type="DynamicFont" id=157]
 size = 128
 font_data = ExtResource( 36 )
 
@@ -5757,16 +5757,16 @@ clip_text = true
 margin_top = 261.0
 margin_right = 692.0
 margin_bottom = 388.0
-custom_styles/normal = SubResource( 157 )
-custom_fonts/font = SubResource( 156 )
+custom_styles/normal = SubResource( 156 )
+custom_fonts/font = SubResource( 157 )
 text = "Continue"
 
 [node name="Button2" type="Button" parent="CanvasLayer3/VBoxContainer"]
 margin_top = 392.0
 margin_right = 692.0
 margin_bottom = 519.0
-custom_styles/normal = SubResource( 157 )
-custom_fonts/font = SubResource( 156 )
+custom_styles/normal = SubResource( 156 )
+custom_fonts/font = SubResource( 157 )
 text = "Exit"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
