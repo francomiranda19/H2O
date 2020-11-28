@@ -63,11 +63,11 @@
 [ext_resource path="res://sprites/70/crouch/Crouch_2.png" type="Texture" id=61]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 66.299
-height = 48.9767
+radius = 165.799
+height = 166.624
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 259.341, 104.903 )
+extents = Vector2( 149.105, 64.9172 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "attack 100"
@@ -1811,7 +1811,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -8.80662, -205.765 ) ]
+"values": [ Vector2( -10.6965, -192.536 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:scale")
@@ -5521,7 +5521,7 @@ states/run/position = Vector2( -280.912, -325.906 )
 transitions = [ "idle", "run", SubResource( 107 ), "run", "idle", SubResource( 108 ), "jump_start", "jump", SubResource( 109 ), "jump_start", "death", SubResource( 110 ), "run", "jump_start", SubResource( 111 ), "idle", "jump_start", SubResource( 112 ), "jump", "fall", SubResource( 113 ), "fall", "jump", SubResource( 114 ), "jump", "attack_start", SubResource( 115 ), "attack_start", "jump", SubResource( 116 ), "jump", "death", SubResource( 117 ), "jump", "crouch_start", SubResource( 118 ), "crouch_start 2", "jump", SubResource( 119 ), "attack", "jump", SubResource( 120 ), "run", "death", SubResource( 121 ), "idle", "death", SubResource( 122 ), "crouch_start", "death", SubResource( 123 ), "crouch", "death", SubResource( 124 ), "crouch_start 2", "death", SubResource( 125 ), "attack", "death", SubResource( 126 ), "attack_start", "death", SubResource( 127 ), "fall", "death", SubResource( 128 ), "fall", "attack_start", SubResource( 129 ), "attack_start", "fall", SubResource( 130 ), "fall", "run", SubResource( 131 ), "run", "fall", SubResource( 132 ), "fall", "idle", SubResource( 133 ), "idle", "fall", SubResource( 134 ), "crouch", "fall", SubResource( 135 ), "attack", "fall", SubResource( 136 ), "attack", "run", SubResource( 137 ), "attack", "idle", SubResource( 138 ), "attack", "crouch_start", SubResource( 139 ), "attack_start", "attack", SubResource( 140 ), "crouch", "crouch_start 2", SubResource( 141 ), "crouch_start", "crouch", SubResource( 142 ), "idle", "crouch_start", SubResource( 143 ), "run", "crouch_start", SubResource( 144 ), "crouch_start 2", "idle", SubResource( 145 ), "crouch_start 2", "run", SubResource( 146 ), "crouch_start 2", "attack_start", SubResource( 147 ), "idle", "attack_start", SubResource( 148 ), "run", "attack_start", SubResource( 149 ) ]
 start_node = "idle"
 end_node = "death"
-graph_offset = Vector2( -578.587, -471.452 )
+graph_offset = Vector2( -578.587, -319.239 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=151]
 
@@ -5556,12 +5556,12 @@ collision_mask = 3
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 3.7097, -348.281 )
-texture = ExtResource( 18 )
+position = Vector2( -10.6965, -192.536 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 61 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.11586, -358.141 )
-scale = Vector2( 5, 5 )
+position = Vector2( 46.7031, -152.715 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -5602,9 +5602,8 @@ shape = SubResource( 1 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 150 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 151 )
-parameters/attack/blend_position = Vector2( 100, 0.011 )
+parameters/attack/blend_position = Vector2( 18.7398, 0.00524926 )
 parameters/attack_start/blend_position = Vector2( 100, 0.001 )
 parameters/crouch/blend_position = Vector2( 100, 0.004 )
 parameters/crouch_start/blend_position = Vector2( 100, 0.011 )
@@ -5623,11 +5622,11 @@ limit_left = -650
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -0.534988, -688.46 )
+position = Vector2( 46.8643, -447.529 )
 shape = SubResource( 2 )
 
 [node name="Bullet" type="Position2D" parent="."]
-position = Vector2( 503.457, -443.349 )
+position = Vector2( 180.635, -128.924 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
