@@ -6,12 +6,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 288.718, 150.886 )
 
-[node name="Bullet" type="Area2D" groups=[
+[node name="MonsterBullet" type="Area2D" groups=[
 "shoot",
 ]]
 script = ExtResource( 2 )
 
-[node name="Bullet" type="Sprite" parent="."]
+[node name="MonsterBullet" type="Sprite" parent="."]
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 1 )
 

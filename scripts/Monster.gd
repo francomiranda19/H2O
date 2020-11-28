@@ -14,7 +14,7 @@ onready var lives_label = $CanvasLayer2/Panel/MarginContainer/HBoxContainer/Labe
 
 var health = 100 setget set_health
 
-var Bullet = preload("res://scenes/Bullet.tscn")
+var Bullet = preload("res://scenes/MonsterBullet.tscn")
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func set_health(value):
