@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://sprites/enemies/policia.png" type="Texture" id=1]
-[ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://sprites/enemies/Level2/policia.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Cop.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.2301, 30.6301 )
