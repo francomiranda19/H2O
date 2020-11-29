@@ -34,9 +34,9 @@ position = Vector2( -4.5, 84 )
 shape = SubResource( 1 )
 
 [node name="Fire" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 13.0315, -551.623 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

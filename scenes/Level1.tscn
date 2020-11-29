@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scenes/Cage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=2]
@@ -18,6 +18,9 @@
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scripts/Level1.gd" type="Script" id=17]
 [ext_resource path="res://scenes/Hatch.tscn" type="PackedScene" id=18]
+[ext_resource path="res://textures/level1/Center.png" type="Texture" id=19]
+[ext_resource path="res://textures/level1/Bottom.png" type="Texture" id=20]
+[ext_resource path="res://textures/level1/Top.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.652, 10.6594 )
@@ -119,6 +122,10 @@ shape = SubResource( 2 )
 
 [node name="Startwall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -1351.75, 16.819 )
+shape = SubResource( 3 )
+
+[node name="Endwall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 31217.2, 571.384 )
 shape = SubResource( 3 )
 
 [node name="Wall" type="CollisionShape2D" parent="StaticBody2D"]
@@ -538,6 +545,24 @@ shape = SubResource( 17 )
 [node name="Hatch" parent="." instance=ExtResource( 18 )]
 position = Vector2( 29659.9, 576.739 )
 z_index = 100
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 29586.5, 2186.31 )
+scale = Vector2( 2.8, 2.8 )
+texture = ExtResource( 21 )
+flip_h = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 29586.5, 2810.4 )
+scale = Vector2( 2.8, 7.5 )
+texture = ExtResource( 19 )
+flip_h = true
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 29586.5, 3164.14 )
+scale = Vector2( 2.8, 2.8 )
+texture = ExtResource( 20 )
+flip_h = true
 
 [editable path="ChangeLevel"]
 

@@ -16,7 +16,6 @@ func _physics_process(delta):
 				is_player = true
 				break
 		if is_player:
-			print("hola")
 			$AnimatedSprite.playing=true
 			$Izq.set_deferred("disabled",false)
 			$Der.set_deferred("disabled",false)
