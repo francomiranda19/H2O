@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/enemies/Level4/Scorpion.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Scorpion.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27.2944, 26.7089 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0509804, 0.517647, 0.0588235, 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "death"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 160, 161, 162, 163, 164, 165, 166 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "shoot"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[node name="Scorpion" type="KinematicBody2D" groups=[
+"enemy",
+]]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = -3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 1 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.00751, 0.634163 )
+shape = SubResource( 1 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+margin_left = -14.6412
+margin_top = -39.2322
+margin_right = 17.3588
+margin_bottom = -33.2322
+custom_styles/fg = SubResource( 2 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/death = SubResource( 3 )
+anims/shoot = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Bullet" type="Position2D" parent="."]
+position = Vector2( -29.689, -12.7232 )

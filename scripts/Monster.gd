@@ -39,9 +39,21 @@ func _ready():
 	$Area2D.connect("body_entered", self, "on_body_entered")
 	$Area2D.connect("body_exited", self, "on_body_exited")
 	$Timer.connect("timeout",self, "on_timeout")
+	$CanvasLayer3/VBoxContainer/Button.connect("pressed", self, "on_continue_pressed")
+	$CanvasLayer3/VBoxContainer/Button2.connect("pressed", self, "on_exit_pressed")
 	
 func on_timeout():
 	modulate.a = 1
+	
+func on_continue_pressed():
+	$AudioStreamPlayer2D.play()
+	$CanvasLayer3/VBoxContainer.hide()
+	get_tree().paused = false
+	
+func on_exit_pressed():
+	$AudioStreamPlayer2D.play()
+	LevelManager.reset()
+	get_tree().paused = false
 	
 func travel(animation):
 	playback.travel(animation)
@@ -78,6 +90,11 @@ func _physics_process(delta):
 	var attacking_released = Input.is_action_just_released("attack")
 	var jumping = Input.is_action_just_pressed("jump")
 	var crouch_pressed = Input.is_action_pressed("crouch")
+	var pause_pressed = Input.is_action_just_pressed("pause")
+	
+	if pause_pressed:
+		$CanvasLayer3/VBoxContainer.show()
+		get_tree().paused = true
 	
 	if attacking_press and on_floor: 
 		linear_vel.x = 0

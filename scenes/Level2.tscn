@@ -179,22 +179,6 @@ shape = SubResource( 6 )
 [node name="Monster" parent="." instance=ExtResource( 1 )]
 position = Vector2( 377.451, 418.769 )
 
-[node name="RainTexture" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0.588235 )
-margin_left = -1224.99
-margin_top = -3048.38
-margin_right = 9586.01
-margin_bottom = 1517.62
-rect_scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 5 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Rain" type="AnimationPlayer" parent="."]
-anims/rain = SubResource( 7 )
-
 [node name="Enemy" parent="." instance=ExtResource( 10 )]
 position = Vector2( 2109.28, 276.253 )
 scale = Vector2( 2, 2 )
@@ -254,6 +238,22 @@ target = NodePath("../Monster")
 position = Vector2( 7993.02, 343.194 )
 scale = Vector2( 6, 4 )
 target = NodePath("../Monster")
+
+[node name="RainTexture" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -1224.99
+margin_top = -3048.38
+margin_right = 9586.01
+margin_bottom = 1517.62
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rain" type="AnimationPlayer" parent="."]
+anims/rain = SubResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
