@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scenes/Cage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://textures/level1/Top.png" type="Texture" id=21]
 [ext_resource path="res://scenes/Alien.tscn" type="PackedScene" id=22]
 [ext_resource path="res://sprites/signs/pantalla_flecha.png" type="Texture" id=23]
+[ext_resource path="res://sprites/signs/pantalla_abajo.png" type="Texture" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.652, 10.6594 )
@@ -487,6 +488,11 @@ texture = ExtResource( 23 )
 position = Vector2( 6447.17, 283.784 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 23 )
+
+[node name="Instrucciones4" type="Sprite" parent="."]
+position = Vector2( 29649.5, 428.625 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 24 )
 
 [node name="Cage" parent="." instance=ExtResource( 1 )]
 position = Vector2( -96.875, 373.443 )
