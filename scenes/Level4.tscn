@@ -306,7 +306,7 @@ position = Vector2( 3192.79, 2.55408 )
 position = Vector2( 23800.9, 18.8961 )
 
 [node name="Oasis3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 28975.2, 18.8961 )
+position = Vector2( 29398.5, 18.8961 )
 
 [node name="Oasis4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 33720.7, 16.4662 )
