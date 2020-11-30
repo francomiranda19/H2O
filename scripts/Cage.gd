@@ -24,6 +24,7 @@ func _physics_process(delta):
 			$AnimationPlayer.play("Broken")
 			var monster = Monster.instance()
 			get_parent().add_child(monster)
+			get_parent().spawned(monster)
 			monster.global_position = global_position
 			$Camera2D.current = false
 			set_physics_process(false)

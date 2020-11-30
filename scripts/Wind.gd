@@ -1,12 +1,17 @@
 extends Area2D
 
 var active = true
+export var direction: Vector2 = Vector2(-50,0)
 
 func _ready():
 	$Timer.connect("timeout", self, "on_timeout")
 	
 func on_timeout():
-	active = false
+	active = not active
+	#if active:
+		#$Particles.play()
+	#else:
+		#$Particles.stop()
 	
 func _physics_process(delta):
 	if active:
@@ -19,5 +24,5 @@ func _physics_process(delta):
 		for result in results:
 			if result.collider.is_in_group("player"):
 				player = result.collider
-				player.linear_vel.x-= 50
-				break
+				player.linear_vel+= direction*delta
+				return

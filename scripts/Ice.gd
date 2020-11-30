@@ -9,6 +9,16 @@ func on_body_entered(body: Node):
 		$Collapse.play("default")
 
 func on_animation_finished():
-	queue_free()
+	enable(false)
+	
+func enable(value):
+	$Block.set_deferred("disabled", not value) 
+	$Area2D/CollisionShape2D.set_deferred("disabled", not value) 
+	if value:
+		show()
+		$Collapse.stop()
+		$Collapse.frame = 0
+	else:
+		hide() 
 		
 		

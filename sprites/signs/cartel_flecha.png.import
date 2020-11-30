@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Alien_Malo_Patron_2.png-8f150dfc40229e68a6c7c24237611bb1.stex"
+path="res://.import/cartel_flecha.png-75bcd7153267cd54655aabad69886a55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/enemies/Alien_Malo_Patron_2.png"
-dest_files=[ "res://.import/Alien_Malo_Patron_2.png-8f150dfc40229e68a6c7c24237611bb1.stex" ]
+source_file="res://sprites/signs/cartel_flecha.png"
+dest_files=[ "res://.import/cartel_flecha.png-75bcd7153267cd54655aabad69886a55.stex" ]
 
 [params]
 

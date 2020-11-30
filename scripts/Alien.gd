@@ -5,9 +5,9 @@ var death = false
 var player: Node2D = null
 export var target: NodePath
 onready var _target: Node2D = get_node(target)
-var CopBullet = preload("res://scenes/CopBullet.tscn")
+var AlienBullet = preload("res://scenes/AlienBullet.tscn")
 var facing_right = false
-var radius_squared = 800000
+var radius_squared = 1200000
 
 func set_health(value):
 	health = value
@@ -25,10 +25,10 @@ func on_animation_finished(anim_name: String):
 	queue_free()
 
 func fire():
-	var cop_bullet = CopBullet.instance()
-	get_parent().add_child(cop_bullet)
-	cop_bullet.global_position = $Bullet.global_position
-	cop_bullet.rotation = (_target.global_position - global_position).angle()
+	var alien_bullet = AlienBullet.instance()
+	get_parent().add_child(alien_bullet)
+	alien_bullet.global_position = $Bullet.global_position
+	alien_bullet.rotation = (_target.global_position - global_position).angle()
 
 func on_timeout():
 	if _target:
@@ -53,6 +53,6 @@ func take_damage(damage):
 	var new_health = max(health - damage, 0)
 	if health > 0:
 		set_health(new_health) 
-	if new_health == 0:
+	if new_health <= 0:
 		death = true
 		$AnimationPlayer.play("death")
