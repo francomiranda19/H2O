@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://scenes/Cage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=2]
@@ -78,6 +78,10 @@ extents = Vector2( 121.14, 108.769 )
 [sub_resource type="RectangleShape2D" id=17]
 resource_local_to_scene = true
 extents = Vector2( 186.582, 176.585 )
+
+[sub_resource type="RectangleShape2D" id=18]
+resource_local_to_scene = true
+extents = Vector2( 305.472, 130.332 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 17 )
@@ -560,6 +564,16 @@ position = Vector2( 238.11, 82.5447 )
 position = Vector2( 0, -2.82849 )
 shape = SubResource( 17 )
 
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 16 )]
+position = Vector2( 2571.13, -562.318 )
+
+[node name="Spawn" parent="Checkpoints/Checkpoint3" index="0"]
+position = Vector2( 163.502, 334.942 )
+
+[node name="CollisionShape2D" parent="Checkpoints/Checkpoint3" index="1"]
+position = Vector2( -50.7971, 282.557 )
+shape = SubResource( 18 )
+
 [node name="Hatch" parent="." instance=ExtResource( 18 )]
 position = Vector2( 29659.9, 576.739 )
 z_index = 100
@@ -621,3 +635,5 @@ scale = Vector2( 0.5, 0.5 )
 [editable path="Checkpoints/Checkpoint"]
 
 [editable path="Checkpoints/Checkpoint2"]
+
+[editable path="Checkpoints/Checkpoint3"]
