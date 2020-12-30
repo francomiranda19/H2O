@@ -11,6 +11,6 @@ func _physics_process(delta):
 
 func on_body_entered(body: Node):
 	if body.is_in_group("enemy") and body.has_method("take_damage"):
-		body.take_damage(50)
+		body.take_damage(10)
 	if not body.is_in_group("player"):
 		queue_free()

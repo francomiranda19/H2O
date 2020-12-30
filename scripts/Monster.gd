@@ -156,7 +156,7 @@ func fire():
 	bullet_position.x += ($Bullet.position.x if facing_right else -$Bullet.position.x) * scale.x
 	bullet_position.y += $Bullet.position.y * scale.y
 	bullet.global_position = bullet_position
-	set_health(health - 9)
+	set_health(health - 4)
 
 func take_damage(damage):
 	if not $Timer.is_stopped():
@@ -177,7 +177,7 @@ func reduce_life():
 	if num_lives <= 0:
 		LevelManager.change_scene("res://scenes/Death.tscn")
 		return
-	self.health = 60 
+	self.health = 70 
 	num_lives -= 1
 	lives_label.text = String(num_lives)
 	if get_parent().has_method("teleport_checkpoint"):

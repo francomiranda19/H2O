@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var health = 100 setget set_health
+var health = 30 setget set_health
 var death = false
 var player: Node2D = null
 export var target: NodePath

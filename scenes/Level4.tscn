@@ -296,8 +296,14 @@ position = Vector2( 17729.5, 2584.16 )
 [node name="Tap7" parent="." instance=ExtResource( 9 )]
 position = Vector2( 20296.3, 1943.09 )
 
+[node name="Tap8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 21591.3, 983.428 )
+
 [node name="Tap6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 29886.2, -869.217 )
+
+[node name="Tap9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 31586, -998.17 )
 
 [node name="Oasis" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3192.79, 2.55408 )
@@ -360,7 +366,7 @@ scale = Vector2( 1, 0.8 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
-volume_db = -15.0
+volume_db = -20.0
 autoplay = true
 
 [node name="Snake" parent="." instance=ExtResource( 16 )]

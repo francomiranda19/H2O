@@ -146,6 +146,9 @@ position = Vector2( 6354.36, -145.978 )
 [node name="Tap2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3368.93, -146.006 )
 
+[node name="Tap3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 6748.43, 490.042 )
+
 [node name="TileMap" type="TileMap" parent="."]
 modulate = Color( 0.305882, 0.298039, 0.298039, 1 )
 position = Vector2( 0, 20 )
@@ -263,7 +266,7 @@ anims/rain = SubResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-volume_db = -15.0
+volume_db = -20.0
 autoplay = true
 
 [node name="Node2D" type="Node2D" parent="."]

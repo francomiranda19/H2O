@@ -58,13 +58,13 @@ position = Vector2( -1.00751, 0.634163 )
 shape = SubResource( 1 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-visible = false
-margin_left = -14.6412
-margin_top = -39.2322
-margin_right = 17.3588
-margin_bottom = -33.2322
+margin_left = -17.025
+margin_top = -22.0159
+margin_right = 14.975
+margin_bottom = -16.0159
 custom_styles/fg = SubResource( 2 )
-value = 100.0
+max_value = 30.0
+value = 30.0
 percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -75,7 +75,6 @@ anims/death = SubResource( 3 )
 anims/shoot = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
 
 [node name="Bullet" type="Position2D" parent="."]
 position = Vector2( -17.0613, -9.6364 )
