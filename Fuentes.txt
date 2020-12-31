@@ -1,0 +1,53 @@
+Font:
+
+
+Pantalla de título:
+
+
+
+
+Nivel 1:
+
+
+
+
+Nivel 2:
+rain:
+https://opengameart.org/content/rain
+
+ground:
+https://opengameart.org/content/ground-outdoors-burned-ground-seamless-texture-with-normalmap-burnedgroundsjpg
+
+city background:
+https://opengameart.org/content/city-background-repetitive-3
+
+stairs:
+https://cc0textures.com/view?id=Rocks011
+
+police:
+https://chasersgaming.itch.io/officer-character
+
+música:
+
+
+
+
+Nivel 3:
+
+
+
+
+Nivel 4:
+snake:
+https://elthen.itch.io/2d-pixel-art-snake-sprites
+
+scorpion:
+https://master-blazter.itch.io/scorpion-pixel-art
+
+spider:
+https://elthen.itch.io/2d-pixel-art-spider-sprites
+
+desert tile map:
+https://pzuh.itch.io/free-desert-platformer-tileset
+
+música:
