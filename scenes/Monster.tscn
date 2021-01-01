@@ -1,4 +1,4 @@
-[gd_scene load_steps=221 format=2]
+[gd_scene load_steps=219 format=2]
 
 [ext_resource path="res://sprites/20/idle/Idle_1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/20/idle/Idle_2.png" type="Texture" id=2]
@@ -5419,8 +5419,6 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=115]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=116]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=117]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=118]
@@ -5449,8 +5447,6 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=129]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=130]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=131]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=132]
@@ -5473,8 +5469,6 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=139]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=140]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=141]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=142]
@@ -5496,6 +5490,8 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=148]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=149]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=158]
 
 [sub_resource type="AnimationNodeStateMachine" id=150]
 states/attack/node = SubResource( 42 )
@@ -5520,10 +5516,10 @@ states/jump_start/node = SubResource( 99 )
 states/jump_start/position = Vector2( 360.77, -346.492 )
 states/run/node = SubResource( 106 )
 states/run/position = Vector2( -280.912, -325.906 )
-transitions = [ "idle", "run", SubResource( 107 ), "run", "idle", SubResource( 108 ), "jump_start", "jump", SubResource( 109 ), "jump_start", "death", SubResource( 110 ), "run", "jump_start", SubResource( 111 ), "idle", "jump_start", SubResource( 112 ), "jump", "fall", SubResource( 113 ), "fall", "jump", SubResource( 114 ), "jump", "attack_start", SubResource( 115 ), "attack_start", "jump", SubResource( 116 ), "jump", "death", SubResource( 117 ), "jump", "crouch_start", SubResource( 118 ), "crouch_start 2", "jump", SubResource( 119 ), "attack", "jump", SubResource( 120 ), "run", "death", SubResource( 121 ), "idle", "death", SubResource( 122 ), "crouch_start", "death", SubResource( 123 ), "crouch", "death", SubResource( 124 ), "crouch_start 2", "death", SubResource( 125 ), "attack", "death", SubResource( 126 ), "attack_start", "death", SubResource( 127 ), "fall", "death", SubResource( 128 ), "fall", "attack_start", SubResource( 129 ), "attack_start", "fall", SubResource( 130 ), "fall", "run", SubResource( 131 ), "run", "fall", SubResource( 132 ), "fall", "idle", SubResource( 133 ), "idle", "fall", SubResource( 134 ), "crouch", "fall", SubResource( 135 ), "attack", "fall", SubResource( 136 ), "attack", "run", SubResource( 137 ), "attack", "idle", SubResource( 138 ), "attack", "crouch_start", SubResource( 139 ), "attack_start", "attack", SubResource( 140 ), "crouch", "crouch_start 2", SubResource( 141 ), "crouch_start", "crouch", SubResource( 142 ), "idle", "crouch_start", SubResource( 143 ), "run", "crouch_start", SubResource( 144 ), "crouch_start 2", "idle", SubResource( 145 ), "crouch_start 2", "run", SubResource( 146 ), "crouch_start 2", "attack_start", SubResource( 147 ), "idle", "attack_start", SubResource( 148 ), "run", "attack_start", SubResource( 149 ) ]
+transitions = [ "idle", "run", SubResource( 107 ), "run", "idle", SubResource( 108 ), "jump_start", "jump", SubResource( 109 ), "jump_start", "death", SubResource( 110 ), "run", "jump_start", SubResource( 111 ), "idle", "jump_start", SubResource( 112 ), "jump", "fall", SubResource( 113 ), "fall", "jump", SubResource( 114 ), "jump", "attack_start", SubResource( 115 ), "jump", "death", SubResource( 117 ), "jump", "crouch_start", SubResource( 118 ), "crouch_start 2", "jump", SubResource( 119 ), "attack", "jump", SubResource( 120 ), "run", "death", SubResource( 121 ), "idle", "death", SubResource( 122 ), "crouch_start", "death", SubResource( 123 ), "crouch", "death", SubResource( 124 ), "crouch_start 2", "death", SubResource( 125 ), "attack", "death", SubResource( 126 ), "attack_start", "death", SubResource( 127 ), "fall", "death", SubResource( 128 ), "fall", "attack_start", SubResource( 129 ), "fall", "run", SubResource( 131 ), "run", "fall", SubResource( 132 ), "fall", "idle", SubResource( 133 ), "idle", "fall", SubResource( 134 ), "crouch", "fall", SubResource( 135 ), "attack", "fall", SubResource( 136 ), "attack", "run", SubResource( 137 ), "attack", "idle", SubResource( 138 ), "attack", "crouch_start", SubResource( 139 ), "crouch", "crouch_start 2", SubResource( 141 ), "crouch_start", "crouch", SubResource( 142 ), "idle", "crouch_start", SubResource( 143 ), "run", "crouch_start", SubResource( 144 ), "crouch_start 2", "idle", SubResource( 145 ), "crouch_start 2", "run", SubResource( 146 ), "crouch_start 2", "attack_start", SubResource( 147 ), "idle", "attack_start", SubResource( 148 ), "run", "attack_start", SubResource( 149 ), "attack_start", "attack", SubResource( 158 ) ]
 start_node = "idle"
 end_node = "death"
-graph_offset = Vector2( -50.7327, -130.245 )
+graph_offset = Vector2( -541.915, -251.809 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=151]
 
@@ -5571,7 +5567,7 @@ script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 3.7097, -348.281 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

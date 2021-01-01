@@ -31,7 +31,7 @@ func fire():
 	melee.rotation = (_target.global_position - global_position).angle()
 
 func on_timeout():
-	if _target:
+	if _target and not death:
 		fire()
 
 func _physics_process(delta):

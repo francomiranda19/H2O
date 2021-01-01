@@ -1,5 +1,9 @@
 extends KinematicBody2D
 
+var linear_vel = Vector2()
+var g = 1200
+var speed = 50
+
 var health = 30 setget set_health
 var death = false
 var player: Node2D = null
@@ -8,6 +12,7 @@ onready var _target: Node2D = get_node(target)
 var CopBullet = preload("res://scenes/CopBullet.tscn")
 var facing_right = false
 var radius_squared = 800000
+var distance = 2200000
 
 func set_health(value):
 	health = value
@@ -31,17 +36,29 @@ func fire():
 	cop_bullet.rotation = (_target.global_position - global_position).angle()
 
 func on_timeout():
-	if _target:
+	if _target and not death:
 		fire()
 
 func _physics_process(delta):
+	linear_vel.y += g * delta
+	linear_vel = move_and_slide(linear_vel, Vector2.UP)
+	linear_vel.x = 0
+	
+	var ref = (_target.global_position - global_position).length_squared()
+	
 	if _target:
-		if (_target.global_position - global_position).length_squared() < radius_squared:
+		if ref < radius_squared:
+			linear_vel.x = 0
 			if $Timer.is_stopped():
 				$Timer.start()
 		else:
 			if not $Timer.is_stopped():
 				$Timer.stop()
+		if radius_squared < ref and ref < distance and not death:
+			linear_vel.x = lerp(linear_vel.x, -speed, 0.5)
+			$AnimationPlayer.play("walk")
+		if (ref >= distance or ref <= radius_squared) and not death:
+			$AnimationPlayer.play("shoot")
 		if _target.global_position.x > global_position.x and not facing_right:
 			scale.x *= -1
 			facing_right = true
@@ -54,5 +71,6 @@ func take_damage(damage):
 	if health > 0:
 		set_health(new_health) 
 	if new_health <= 0:
+		linear_vel.x = 0
 		death = true
 		$AnimationPlayer.play("death")
