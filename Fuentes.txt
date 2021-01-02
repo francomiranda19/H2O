@@ -1,15 +1,55 @@
 Bacon Font:
 https://www.fontspace.com/bacon-font-f7372
 
+Pantalla FLV:
+Fuente FLV:
+https://www.1001fonts.com/hello-denver-display-font.html
+
+Fuente Studios:
+https://www.dafont.com/neon-pixel-7.font
+
 Pantalla de título:
+música:
+https://maysama.itch.io/freeambientmusic
 
+background:
+https://burgerbunn.itch.io/beach-background
 
+textura botones:
+https://videohive.net/item/footage-ink-in-water-blue-ink-reacting-in-water-creating-abstract-background/21441723
 
+botella logo:
+https://www.freepik.es/vector-gratis/botella-agua-transparente_4228326.htm#page=1&query=botella%20de%20agua&position=15
+
+efecto de agua logo:
+https://es.brusheezy.com/cepillos/64427-archivo-psd-water-text-effect
+
+Pestaña "controles":
+música: 
+https://tallbeard.itch.io/music-loop-bundle
+
+Pantalla Game Over:
+Fuente Game Over:
+https://www.1001freefonts.com/es/gore-font.font
+
+Sonido:
+https://bckr.itch.io/sdap
 
 Nivel 1:
+música: 
+https://gamesupply.itch.io/ultimate-space-game-mega-asset-package
 
+pipe:
+https://opengameart.org/content/energy-pipe
 
+textura metal:
+https://cc0textures.com/view?id=MetalPlates006
 
+textura suelo metalico:
+https://texturehaven.com/tex/?t=metal_plate
+
+textura paneles:
+https://fireboltstudios.itch.io/sci-fi-texture-pack-1
 
 Nivel 2:
 rain:
@@ -33,7 +73,26 @@ música:
 
 
 Nivel 3:
+música:
+https://opengameart.org/content/happy-synths-loop-with-slight-christmas-feeling
 
+winter tileset:
+https://opengameart.org/content/2d-platform-winter-tiles
+
+ice tileset:
+https://opengameart.org/content/platformer-ice-tileset
+
+rock tileset:
+https://opengameart.org/content/rock-tileset
+
+background: 
+https://opengameart.org/content/in-the-snow
+
+textura lava: 
+https://opengameart.org/content/seamless-pattern-glowing-coal 
+
+sprite iceball:
+https://gamedeveloperstudio.itch.io/snowball
 
 
 
