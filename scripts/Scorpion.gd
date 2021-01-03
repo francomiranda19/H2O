@@ -58,9 +58,11 @@ func _physics_process(delta):
 			linear_vel.x = 0
 		if _target.global_position.x > global_position.x and not facing_right:
 			scale.x *= -1
+			speed *= -1
 			facing_right = true
 		if _target.global_position.x < global_position.x and facing_right:
 			scale.x *= -1
+			speed *= -1
 			facing_right =  false
 
 func take_damage(damage):
