@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var linear_vel = Vector2()
 var g = 1200
-var speed = 50
+var speed = 300
 
 var health = 40 setget set_health
 var death = false

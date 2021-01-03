@@ -13,6 +13,7 @@ var CopBullet = preload("res://scenes/CopBullet.tscn")
 var facing_right = false
 var radius_squared = 800000
 var distance = 2200000
+var height = 100000
 
 func set_health(value):
 	health = value

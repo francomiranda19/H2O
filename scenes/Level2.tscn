@@ -213,6 +213,11 @@ position = Vector2( 5043.62, -676.775 )
 scale = Vector2( 2, 2 )
 target = NodePath("../Monster")
 
+[node name="Enemy13" parent="." instance=ExtResource( 10 )]
+position = Vector2( 6043.01, -677.668 )
+scale = Vector2( 2, 2 )
+target = NodePath("../Monster")
+
 [node name="Enemy6" parent="." instance=ExtResource( 10 )]
 position = Vector2( 4565.61, -549.483 )
 scale = Vector2( 2, 2 )
