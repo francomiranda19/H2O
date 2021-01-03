@@ -502,9 +502,9 @@ texture = ExtResource( 24 )
 position = Vector2( -96.875, 373.443 )
 
 [node name="PlatformSpawn" parent="." instance=ExtResource( 6 )]
-position = Vector2( 10127.4, 1133.04 )
-amount = 13
-separation = 310
+position = Vector2( 10391.4, 1133.04 )
+amount = 5
+separation = 800
 time = 3
 offset = 2.0
 
@@ -516,10 +516,10 @@ time = 2
 offset = 0.7
 
 [node name="PlatformSpawn3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 24397.3, 1133.04 )
-amount = 10
-separation = 310
-time = 1
+position = Vector2( 24563.4, 1133.04 )
+amount = 5
+separation = 620
+time = 3
 offset = 0.8
 
 [node name="Tap" parent="." instance=ExtResource( 2 )]
@@ -541,7 +541,7 @@ position = Vector2( 29791.8, 5864.42 )
 shape = SubResource( 15 )
 
 [node name="deathpit" parent="." instance=ExtResource( 15 )]
-position = Vector2( 3626.59, 2162.4 )
+position = Vector2( 4493.13, 2032.36 )
 
 [node name="Checkpoints" type="Node2D" parent="."]
 
@@ -619,8 +619,8 @@ position = Vector2( 5245.37, 362.6 )
 scale = Vector2( 0.23, 0.23 )
 
 [node name="Alien6" parent="Enemies" instance=ExtResource( 22 )]
-position = Vector2( 8503.69, 1021.1 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 8496.05, 916.675 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Alien7" parent="Enemies" instance=ExtResource( 22 )]
 position = Vector2( 16376.3, 889.894 )
