@@ -8,7 +8,7 @@ func _ready():
 	
 func on_body_entered(body: Node):
 	if body.has_method("take_damage"):
-		body.take_damage(13)
+		body.take_damage(12)
 	queue_free()
 	
 func _physics_process(delta):
