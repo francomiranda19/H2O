@@ -75,6 +75,7 @@ anims/death = SubResource( 3 )
 anims/shoot = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 
 [node name="Bullet" type="Position2D" parent="."]
 position = Vector2( -17.0613, -9.6364 )
