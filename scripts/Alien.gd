@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 var linear_vel = Vector2()
 var g = 1200
-var speed = 50
+var speed = 150
 
-var health = 20 setget set_health
+var health = 60 setget set_health
 var death = false
 var player: Node2D = null
 export var target: NodePath

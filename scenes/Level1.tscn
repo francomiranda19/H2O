@@ -523,7 +523,7 @@ time = 3
 offset = 0.8
 
 [node name="Tap" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2939.8, -112.934 )
+position = Vector2( 2625.46, -111.411 )
 
 [node name="Tap4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 15668.8, 1141.17 )

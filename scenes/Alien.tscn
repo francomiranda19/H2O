@@ -99,8 +99,8 @@ margin_top = -607.0
 margin_right = 88.0
 margin_bottom = -556.0
 custom_styles/fg = SubResource( 2 )
-max_value = 20.0
-value = 20.0
+max_value = 60.0
+value = 60.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -110,7 +110,7 @@ anims/death = SubResource( 3 )
 anims/shoot = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.5
 
 [node name="Bullet" type="Position2D" parent="."]
 position = Vector2( -386.071, -18.0459 )
