@@ -51,6 +51,8 @@ https://texturehaven.com/tex/?t=metal_plate
 textura paneles:
 https://fireboltstudios.itch.io/sci-fi-texture-pack-1
 
+
+
 Nivel 2:
 rain:
 https://opengameart.org/content/rain
@@ -113,3 +115,10 @@ oasis:
 https://illustoon.com/es/?id=3929
 
 música:
+
+
+
+fuente genérica de música:
+https://itch.io/game-assets/free/tag-music
+https://void1gaming.itch.io/lo-fi-music-pack
+
