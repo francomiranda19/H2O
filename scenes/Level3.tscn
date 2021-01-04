@@ -1262,7 +1262,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 36 )
 
 [node name="Monster" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6627.32, 266.618 )
+position = Vector2( 152.547, 530.146 )
 
 [node name="IcePlatform" type="Node2D" parent="."]
 
