@@ -135,8 +135,7 @@ background:
 https://opengameart.org/content/greyan-space-ship-bridge
 
 UFO:
-https://opengameart.org/content/ufo-animated-sprite-sheet
-
+https://opengameart.org/content/ufo-1
 
 
 
