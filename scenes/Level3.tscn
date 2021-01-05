@@ -1236,7 +1236,6 @@ position = Vector2( 10884, 5054.2 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Estanque" parent="Tent2" index="0"]
-frame = 0
 flip_h = true
 
 [node name="CollisionShape2D" parent="Tent2" index="1"]
