@@ -16,7 +16,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 271.748, 95.6665 )
+extents = Vector2( 537.959, 231.603 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.0509804, 0.517647, 0.0588235, 1 )
@@ -30,12 +30,12 @@ script = ExtResource( 2 )
 position = Vector2( 0, 89.1627 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( -2.74847, -2.75622 )
+position = Vector2( -0.0546837, 79.857 )
 scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 2 )
 
@@ -56,4 +56,4 @@ __meta__ = {
 wait_time = 0.5
 
 [node name="Bullet" type="Position2D" parent="."]
-position = Vector2( 0.209656, 52.6787 )
+position = Vector2( 2.45609, 201.988 )

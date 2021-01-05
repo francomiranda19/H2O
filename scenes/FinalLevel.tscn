@@ -51,6 +51,7 @@ texture = ExtResource( 4 )
 
 [node name="UFO" parent="." instance=ExtResource( 1 )]
 position = Vector2( 922.825, 190.273 )
+scale = Vector2( 0.5, 0.5 )
 target = NodePath("../Monster")
 
 [node name="Tween" type="Tween" parent="."]
