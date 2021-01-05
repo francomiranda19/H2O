@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Area51.wav-80fe1d6644f59c9087efaed4886134fe.sample"
+
+[deps]
+
+source_file="res://music/final_level/Area51.wav"
+dest_files=[ "res://.import/Area51.wav-80fe1d6644f59c9087efaed4886134fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
