@@ -315,6 +315,9 @@ position = Vector2( 31586, -998.17 )
 [node name="Oasis" parent="." instance=ExtResource( 14 )]
 position = Vector2( 4490.25, 13.2328 )
 
+[node name="Oasis5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1516.99, 3.02052 )
+
 [node name="Oasis2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 23800.9, 18.8961 )
 
