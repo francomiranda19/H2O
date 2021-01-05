@@ -21,6 +21,10 @@ func on_tween_all_completed():
 	$Tween.start()
 	
 func move():
-	$Tween.interpolate_property($UFO, "position:x", $UFO.position.x, rand_range(300, 1500), 1.1, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
-	$Tween.interpolate_property($UFO, "position:y", $UFO.position.y, rand_range(100, 200), 1.5, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
+	if not $UFO.in_base:
+		$Tween.interpolate_property($UFO, "position:x", $UFO.position.x, rand_range(300, 1500), 2.1, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
+		$Tween.interpolate_property($UFO, "position:y", $UFO.position.y, rand_range(100, 200), 2.5, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
+	else:
+		$Tween.interpolate_property($UFO, "position:x", $UFO.position.x, 1650, 2.1, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
+		$Tween.interpolate_property($UFO, "position:y", $UFO.position.y, 900, 2.5, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
 	

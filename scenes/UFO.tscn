@@ -26,11 +26,14 @@ bg_color = Color( 0.0509804, 0.517647, 0.0588235, 1 )
 ]]
 script = ExtResource( 2 )
 
+[node name="Bullet" type="Position2D" parent="."]
+position = Vector2( 2.45609, 201.988 )
+
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 89.1627 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -52,8 +55,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
+[node name="NotInBaseTimer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="Bullet" type="Position2D" parent="."]
-position = Vector2( 2.45609, 201.988 )
+[node name="WaitTimer" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="ChangeTimer" type="Timer" parent="."]
+wait_time = 12.5
