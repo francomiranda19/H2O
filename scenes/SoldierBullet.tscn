@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/SoldierBullet.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 474.623, 47.6326 )
+
+[node name="SoldierBullet" type="Area2D" groups=[
+"shoot",
+]]
+script = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -14.2886, 5.37149 )
+scale = Vector2( 0.530909, 0.525897 )
+color = Color( 0.968627, 1, 0, 1 )
+polygon = PoolVector2Array( 1.08124, -17.9005, 88.8015, -17.9692, 88.9586, -9.56132, 45.4306, -9.56132, 0.959715, -9.40269 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 9.62633, -1.86366 )
+scale = Vector2( 0.05, 0.05 )
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 9.60003, -1.81327 )
+scale = Vector2( 2.38911, 0.252996 )

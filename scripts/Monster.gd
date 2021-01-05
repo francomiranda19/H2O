@@ -182,3 +182,7 @@ func reduce_life():
 	lives_label.text = String(num_lives)
 	if get_parent().has_method("teleport_checkpoint"):
 		get_parent().teleport_checkpoint(self)
+		
+func increase_life():
+	num_lives += 1
+	lives_label.text = String(num_lives)

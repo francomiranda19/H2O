@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/level4/BG2.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://scenes/Snake.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/Scorpion.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Spider.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/Life.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -751,3 +752,31 @@ target = NodePath("../Monster")
 position = Vector2( 22012, 569.339 )
 scale = Vector2( 2, 2 )
 target = NodePath("../Monster")
+
+[node name="Life" parent="." instance=ExtResource( 19 )]
+position = Vector2( 15665.7, 341.768 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 15808.1, 341.768 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life3" parent="." instance=ExtResource( 19 )]
+position = Vector2( 15958.5, 343.368 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life4" parent="." instance=ExtResource( 19 )]
+position = Vector2( 16688.3, 1241.39 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life5" parent="." instance=ExtResource( 19 )]
+position = Vector2( 17099.4, 2651.59 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life6" parent="." instance=ExtResource( 19 )]
+position = Vector2( 22914.9, 918.358 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life7" parent="." instance=ExtResource( 19 )]
+position = Vector2( 29654.5, -933.714 )
+scale = Vector2( 0.1, 0.1 )

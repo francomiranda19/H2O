@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://textures/level3/eternal-ice-flattened.png" type="Texture" id=1]
 [ext_resource path="res://textures/level3/snow.png" type="Texture" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://sprites/signs/cartel_caida.png" type="Texture" id=36]
 [ext_resource path="res://sprites/signs/cartel_hielo.png" type="Texture" id=37]
 [ext_resource path="res://music/level3/Christmas synths.ogg" type="AudioStream" id=38]
+[ext_resource path="res://scenes/Life.tscn" type="PackedScene" id=39]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 202.319, 283.848 )
@@ -1260,6 +1261,18 @@ texture = ExtResource( 37 )
 position = Vector2( 24459.4, 4437.07 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 36 )
+
+[node name="Life" parent="." instance=ExtResource( 39 )]
+position = Vector2( 13417.5, 2007.32 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life2" parent="." instance=ExtResource( 39 )]
+position = Vector2( 13169.7, 2004.47 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Life3" parent="." instance=ExtResource( 39 )]
+position = Vector2( 23452.2, 4140.99 )
+scale = Vector2( 0.1, 0.1 )
 
 [node name="Monster" parent="." instance=ExtResource( 3 )]
 position = Vector2( 152.547, 530.146 )
