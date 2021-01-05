@@ -9,7 +9,7 @@ height = 125.816
 
 [node name="Iceball" type="RigidBody2D"]
 collision_layer = 0
-gravity_scale = 3.5
+gravity_scale = 5.0
 contacts_reported = 3
 contact_monitor = true
 script = ExtResource( 7 )
