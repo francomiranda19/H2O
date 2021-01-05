@@ -35,12 +35,18 @@ func on_body_exited(body: Node):
 		check_crouch()
 	
 func _ready():
+	set_health(LevelManager.health)
+	num_lives = LevelManager.num_lives
 	lives_label.text = String(num_lives)
 	$Area2D.connect("body_entered", self, "on_body_entered")
 	$Area2D.connect("body_exited", self, "on_body_exited")
 	$Timer.connect("timeout",self, "on_timeout")
 	$CanvasLayer3/VBoxContainer/Button.connect("pressed", self, "on_continue_pressed")
 	$CanvasLayer3/VBoxContainer/Button2.connect("pressed", self, "on_exit_pressed")
+	
+func _exit_tree():
+	LevelManager.health = health
+	LevelManager.num_lives = num_lives
 	
 func on_timeout():
 	modulate.a = 1

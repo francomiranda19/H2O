@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/level5/base/Base.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scenes/Tap.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scripts/Level5.gd" type="Script" id=12]
 [ext_resource path="res://scenes/Life.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -40,10 +41,10 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 47, 0, 47, 47, 0, 47 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 46, 0, 46, 15, 0, 15 )
 
 [sub_resource type="TileSet" id=5]
@@ -57,14 +58,14 @@ points = PoolVector2Array( 0, 0, 46, 0, 46, 15, 0, 15 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 4 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -78,22 +79,22 @@ points = PoolVector2Array( 0, 0, 46, 0, 46, 15, 0, 15 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 6 )
+1/shape = SubResource( 4 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 46, 0, 46, 15, 0, 15 )
 
-[sub_resource type="TileSet" id=8]
+[sub_resource type="TileSet" id=7]
 0/name = "small platform.png 0"
 0/texture = ExtResource( 7 )
 0/tex_offset = Vector2( 0, 0 )
@@ -104,19 +105,19 @@ points = PoolVector2Array( 0, 0, 46, 0, 46, 15, 0, 15 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 7 )
+0/shape = SubResource( 6 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 340.163, 677.285 )
 
 [node name="Node2D" type="Node2D"]
@@ -156,7 +157,7 @@ tile_data = PoolIntArray( -65533, 0, 0, -65501, 0, 0 )
 
 [node name="SmallPlatform" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
-tile_set = SubResource( 8 )
+tile_set = SubResource( 7 )
 cell_size = Vector2( 46, 15 )
 format = 1
 tile_data = PoolIntArray( -720854, 0, 0, -589793, 0, 0, -589790, 0, 0, -524274, 0, 0, -524265, 0, 0, -458740, 0, 0, -393206, 0, 0 )
@@ -165,7 +166,7 @@ tile_data = PoolIntArray( -720854, 0, 0, -589793, 0, 0, -589790, 0, 0, -524274, 
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -373.288, -211.149 )
-shape = SubResource( 3 )
+shape = SubResource( 8 )
 
 [node name="Monster" parent="." instance=ExtResource( 1 )]
 position = Vector2( 301.14, -49.1221 )
@@ -228,3 +229,9 @@ position = Vector2( 5650.63, 22.6171 )
 
 [node name="Tap3" parent="." instance=ExtResource( 11 )]
 position = Vector2( 7042, -547.795 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Node2D" instance=ExtResource( 14 )]
+position = Vector2( 604.385, -188.157 )
+scale = Vector2( 1, 0.2 )

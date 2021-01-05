@@ -1,5 +1,8 @@
 extends Node
 
+var health = 101
+var num_lives = 4
+
 onready var Game = get_tree().get_root().get_node("Game")
 
 func next():

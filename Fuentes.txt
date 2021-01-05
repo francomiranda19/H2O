@@ -118,6 +118,28 @@ música:
 
 
 
+Nivel 5:
+background:
+https://chasersgaming.itch.io/brawler-asset-tile-set-military-base-sms
+
+tile map:
+https://just-a-cookie.itch.io/idnustrial-platformer-asset-pack
+
+soldier:
+vestrel00.wix.com/hoalw
+
+
+
+Nivel Final:
+background:
+https://opengameart.org/content/greyan-space-ship-bridge
+
+UFO:
+https://opengameart.org/content/ufo-animated-sprite-sheet
+
+
+
+
 fuente genérica de música:
 https://itch.io/game-assets/free/tag-music
 https://void1gaming.itch.io/lo-fi-music-pack
