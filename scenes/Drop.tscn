@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://textures/final_level/gota.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Drop.gd" type="Script" id=7]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 72.6195
+height = 125.816
+
+[node name="Iceball" type="RigidBody2D"]
+collision_layer = 0
+gravity_scale = 3.5
+contacts_reported = 3
+contact_monitor = true
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.792572, 26.3772 )
+shape = SubResource( 1 )
+
+[node name="gota" type="Sprite" parent="."]
+position = Vector2( 5.37744, 2.62775 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
