@@ -1,4 +1,4 @@
 extends VideoPlayer
 
-func _on_FLV_finished():
+func _on_Cutscene1_finished():
 	LevelManager.next()

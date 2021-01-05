@@ -463,10 +463,10 @@ __meta__ = {
 
 [node name="Ground12" type="TextureRect" parent="StaticBody2D"]
 modulate = Color( 0.341176, 0.388235, 0.862745, 1 )
-margin_left = 29819.4
-margin_top = 857.777
-margin_right = 33828.4
-margin_bottom = 6983.78
+margin_left = 29819.0
+margin_top = 858.0
+margin_right = 37924.0
+margin_bottom = 6984.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 stretch_mode = 2
@@ -642,6 +642,14 @@ scale = Vector2( 0.4, 0.45 )
 [node name="Alien8" parent="Enemies" instance=ExtResource( 22 )]
 position = Vector2( 23504, 865.467 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="deathpit2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 11990.2, 2025.69 )
+scale = Vector2( 0.85, 1 )
+
+[node name="deathpit3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 25796, 2062.3 )
+scale = Vector2( 0.65, 1 )
 
 [editable path="ChangeLevel"]
 

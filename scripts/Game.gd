@@ -2,8 +2,11 @@ extends Node2D
 
 var Levels = [preload("res://scenes/Intro.tscn"),
 	preload("res://scenes/TitleScreen.tscn"),
+	preload("res://scenes/Cutscene1.tscn"),
 	preload("res://scenes/Level1.tscn"), 
+	preload("res://scenes/Cutscene2.tscn"),
 	preload("res://scenes/Level2.tscn"),
+	preload("res://scenes/Cutscene3.tscn"),
 	preload("res://scenes/Level3.tscn"),
 	preload("res://scenes/Level4.tscn")]
 
