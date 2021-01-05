@@ -12,6 +12,9 @@ Pantalla de título:
 música:
 https://maysama.itch.io/freeambientmusic
 
+Efecto clic: 
+https://www.youtube.com/watch?v=uca4VcLs5IE
+
 background:
 https://burgerbunn.itch.io/beach-background
 
@@ -137,6 +140,19 @@ https://opengameart.org/content/greyan-space-ship-bridge
 UFO:
 https://opengameart.org/content/ufo-1
 
+Créditos:
+SFX: https://loadless.itch.io/water-sfx
+
+
+Cutscenes:
+Efecto sirena:
+https://www.youtube.com/watch?v=KmTqPkjb71c
+
+Efecto alarma:
+https://www.youtube.com/watch?v=YwANQb4phH0
+
+Música:
+https://n91.itch.io/free-atmospheric-assets
 
 
 fuente genérica de música:
