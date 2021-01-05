@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://textures/title_screen/beach.png" type="Texture" id=1]
 [ext_resource path="res://textures/title_screen/botones.jpg" type="Texture" id=2]
@@ -37,6 +37,14 @@ region_rect = Rect2( 219.656, 85.4247, 340.717, 164.218 )
 [sub_resource type="DynamicFont" id=8]
 size = 128
 use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 608, 342 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 100
 font_data = ExtResource( 4 )
 
 [node name="TitleScreen" type="CanvasLayer"]
@@ -101,6 +109,23 @@ custom_styles/normal = SubResource( 7 )
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Salir"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+margin_left = 1492.52
+margin_top = 949.647
+margin_right = 1891.52
+margin_bottom = 1048.65
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditos" type="Button" parent="Panel/VBoxContainer2"]
+margin_right = 399.0
+margin_bottom = 99.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Creditos"
 
 [node name="Ambiente" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

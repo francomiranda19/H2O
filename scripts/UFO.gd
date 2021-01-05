@@ -50,3 +50,4 @@ func take_damage(damage):
 		set_health(new_health) 
 	if new_health <= 0:
 		death = true
+		LevelManager.next()

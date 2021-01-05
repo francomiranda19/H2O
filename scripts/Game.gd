@@ -11,7 +11,8 @@ var Levels = [preload("res://scenes/Intro.tscn"),
 	preload("res://scenes/Cutscene4.tscn"),
 	preload("res://scenes/Level4.tscn"),
 	preload("res://scenes/Level5.tscn"),
-	preload("res://scenes/FinalLevel.tscn")]
+	preload("res://scenes/FinalLevel.tscn"),
+	preload("res://scenes/Credits.tscn")]
 
 var current_level = 0
 var current_world: Node = null
