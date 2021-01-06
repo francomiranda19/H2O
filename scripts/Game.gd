@@ -10,8 +10,11 @@ var Levels = [preload("res://scenes/Intro.tscn"),
 	preload("res://scenes/Level3.tscn"),
 	preload("res://scenes/Cutscene4.tscn"),
 	preload("res://scenes/Level4.tscn"),
+	preload("res://scenes/Cutscene5.tscn"),
 	preload("res://scenes/Level5.tscn"),
+	preload("res://scenes/Cutscene6.tscn"),
 	preload("res://scenes/FinalLevel.tscn"),
+	preload("res://scenes/CutsceneFinal.tscn"),
 	preload("res://scenes/Credits.tscn")]
 
 var current_level = 0
