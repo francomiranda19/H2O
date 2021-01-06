@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alert! Outsider!.wav-4a103117dfcdf4cb0a86678b63aba887.sample"
+
+[deps]
+
+source_file="res://music/level5/Alert! Outsider!.wav"
+dest_files=[ "res://.import/Alert! Outsider!.wav-4a103117dfcdf4cb0a86678b63aba887.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
