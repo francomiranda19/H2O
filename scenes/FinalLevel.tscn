@@ -71,7 +71,6 @@ texture = ExtResource( 4 )
 position = Vector2( 1718.06, 868.139 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="UFO" parent="." instance=ExtResource( 1 )]

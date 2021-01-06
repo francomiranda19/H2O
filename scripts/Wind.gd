@@ -1,17 +1,19 @@
 extends Area2D
 
 var active = true
-export var direction: Vector2 = Vector2(-50,0)
+export var direction: Vector2 = Vector2(-800,0)
 
 func _ready():
 	$Timer.connect("timeout", self, "on_timeout")
 	
 func on_timeout():
 	active = not active
-	#if active:
-		#$Particles.play()
-	#else:
-		#$Particles.stop()
+	if active:
+		$Particles2D.set_deferred("emitting", true)
+		$Particles2D2.set_deferred("emitting",true)
+	else:
+		$Particles2D.set_deferred("emitting", false)
+		$Particles2D2.set_deferred("emitting",false)
 	
 func _physics_process(delta):
 	if active:
