@@ -144,6 +144,15 @@ position = Vector2( 11018.9, -336.255 )
 scale = Vector2( 6, 4 )
 texture = ExtResource( 5 )
 
+[node name="Tap" parent="." instance=ExtResource( 11 )]
+position = Vector2( 4082.24, 20.2554 )
+
+[node name="Tap2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 5650.63, 22.6171 )
+
+[node name="Tap3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7042, -547.795 )
+
 [node name="Life" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1121.29, -356.316 )
 scale = Vector2( 0.15, 0.15 )
@@ -220,15 +229,6 @@ target = NodePath("../Monster")
 position = Vector2( 10114.9, -115.443 )
 scale = Vector2( 4, 4 )
 target = NodePath("../Monster")
-
-[node name="Tap" parent="." instance=ExtResource( 11 )]
-position = Vector2( 4082.24, 20.2554 )
-
-[node name="Tap2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5650.63, 22.6171 )
-
-[node name="Tap3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7042, -547.795 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
