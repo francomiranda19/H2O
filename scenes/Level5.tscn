@@ -170,7 +170,7 @@ scale = Vector2( 6, -4 )
 texture = ExtResource( 4 )
 
 [node name="Sprite9" type="Sprite" parent="."]
-position = Vector2( 15981.5, -2095.93 )
+position = Vector2( 15981.5, -2027.97 )
 scale = Vector2( 6, -4 )
 texture = ExtResource( 4 )
 
@@ -328,12 +328,17 @@ scale = Vector2( 0.1, 1 )
 [node name="Wind" parent="." instance=ExtResource( 18 )]
 position = Vector2( 2682.3, -612.856 )
 linear_damp = 0.0
-direction = Vector2( -1200, 0 )
+direction = Vector2( -8000, 0 )
 
 [node name="Wind2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 7107.89, -612.856 )
+position = Vector2( 6819.39, -612.856 )
 linear_damp = 0.0
-direction = Vector2( -1200, 0 )
+direction = Vector2( -8000, 0 )
+
+[node name="Wind3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 10609.4, -612.856 )
+linear_damp = 0.0
+direction = Vector2( -8000, 0 )
 
 [node name="RocketSpawner" parent="." instance=ExtResource( 10 )]
 position = Vector2( 864.778, -1315.17 )
@@ -345,13 +350,16 @@ position = Vector2( 2084.7, -1308.82 )
 position = Vector2( 2456.15, -1315.17 )
 
 [node name="RocketSpawner4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 4321.29, -1335.33 )
+position = Vector2( 4366.6, -1335.33 )
 
 [node name="RocketSpawner5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 6625.29, -1335.33 )
 
 [node name="RocketSpawner6" parent="." instance=ExtResource( 10 )]
-position = Vector2( 10539.4, -1335.33 )
+position = Vector2( 10133, -1335.33 )
+
+[node name="RocketSpawner7" parent="." instance=ExtResource( 10 )]
+position = Vector2( 11025.5, -1335.33 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
