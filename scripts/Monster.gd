@@ -12,13 +12,13 @@ var facing_right = true
 export var num_lives = 4
 onready var lives_label = $CanvasLayer2/Panel/MarginContainer/HBoxContainer/Label2
 
-var health = 101 setget set_health
+var health = 100.1 setget set_health
 
 var Bullet = preload("res://scenes/MonsterBullet.tscn")
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func set_health(value):
-	health = clamp(value, 0, 101)
+	health = clamp(value, 0, 100.1)
 	$CanvasLayer/HealthBar.value = value
 	
 func check_crouch():
@@ -174,7 +174,7 @@ func take_damage(damage):
 func heal(amount):
 	if not $Timer.is_stopped():
 		return
-	if health < 101:
+	if health < 100.1:
 		self.health += amount
 		$Timer.start()
 		modulate.a = 0.5
@@ -183,7 +183,7 @@ func reduce_life():
 	if num_lives <= 0:
 		LevelManager.change_scene("res://scenes/Death.tscn")
 		return
-	self.health = 71 
+	self.health = 70.1
 	num_lives -= 1
 	lives_label.text = String(num_lives)
 	if get_parent().has_method("teleport_checkpoint"):
