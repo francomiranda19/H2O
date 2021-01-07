@@ -131,7 +131,7 @@ func _physics_process(delta):
 	if in_area == 0:
 		if attacking_press:
 			travel("attack_start")
-		if attacking_released:
+		elif attacking_released:
 			travel("attack")
 	
 	if health <= 0:
@@ -178,7 +178,7 @@ func heal(amount):
 		self.health += amount
 		$Timer.start()
 		modulate.a = 0.5
-		
+
 func reduce_life():
 	if num_lives <= 0:
 		LevelManager.change_scene("res://scenes/Death.tscn")
