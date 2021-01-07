@@ -291,9 +291,6 @@ position = Vector2( 7798.56, 1369.22 )
 [node name="Tap4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 10573.6, 2711.18 )
 
-[node name="Tap5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 15019.8, 1495.95 )
-
 [node name="Tap10" parent="." instance=ExtResource( 9 )]
 position = Vector2( 13893.9, 2712.43 )
 
