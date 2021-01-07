@@ -210,7 +210,7 @@ position = Vector2( 5828.9, 22.6171 )
 position = Vector2( 7042, -547.795 )
 
 [node name="Tap4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 10136.3, 51.7413 )
+position = Vector2( 12381.5, 26.2701 )
 
 [node name="Life" parent="." instance=ExtResource( 13 )]
 position = Vector2( 11660.9, -356.17 )
@@ -228,7 +228,7 @@ scale = Vector2( 4, 4 )
 tile_set = SubResource( 7 )
 cell_size = Vector2( 46, 15 )
 format = 1
-tile_data = PoolIntArray( -720854, 0, 0, -720838, 0, 0, -655329, 0, 0, -655326, 0, 0, -655304, 0, 0, -589801, 0, 0, -524274, 0, 0, -458740, 0, 0, -393206, 0, 0, -131068, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65501, 0, 0, -65500, 0, 0, -65499, 0, 0 )
+tile_data = PoolIntArray( -720854, 0, 0, -720838, 0, 0, -655329, 0, 0, -655326, 0, 0, -655304, 0, 0, -589801, 0, 0, -589780, 0, 0, -524274, 0, 0, -458740, 0, 0, -458709, 0, 0, -393206, 0, 0, -131068, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65501, 0, 0, -65500, 0, 0, -65499, 0, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -254,6 +254,11 @@ position = Vector2( 8485.66, -751.635 )
 scale = Vector2( 1.5, 1.5 )
 target = NodePath("../Monster")
 
+[node name="Soldier4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10908.9, -146.229 )
+scale = Vector2( 1.5, 1.5 )
+target = NodePath("../Monster")
+
 [node name="Alien" parent="." instance=ExtResource( 9 )]
 position = Vector2( 7630.21, -412.9 )
 scale = Vector2( 0.25, 0.25 )
@@ -261,6 +266,11 @@ target = NodePath("../Monster")
 
 [node name="Alien2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 7060.43, -699.724 )
+scale = Vector2( 0.25, 0.25 )
+target = NodePath("../Monster")
+
+[node name="Alien3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 11629, -703.959 )
 scale = Vector2( 0.25, 0.25 )
 target = NodePath("../Monster")
 
@@ -343,5 +353,5 @@ position = Vector2( 10539.4, -1335.33 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
-volume_db = -10.0
+volume_db = -20.0
 autoplay = true

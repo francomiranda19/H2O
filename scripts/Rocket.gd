@@ -7,7 +7,7 @@ func _ready():
 	$AnimatedSprite.scale = new_scale
 	
 func on_body_entered(body: Node):
-	if body.has_method("take_damage"):
+	if body.is_in_group("player") and body.has_method("take_damage"):
 		body.take_damage(13)
 	queue_free()
 	

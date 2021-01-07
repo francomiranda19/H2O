@@ -7,7 +7,7 @@ export var target: NodePath
 onready var _target: Node2D = get_node(target)
 var SoldierBullet = preload("res://scenes/SoldierBullet.tscn")
 var facing_right = false
-var radius_squared = 1800000
+var radius_squared = 2200000
 
 func set_health(value):
 	health = value
