@@ -17,7 +17,8 @@ _global_script_class_icons={
 
 config/name="H2Oscar"
 run/main_scene="res://scenes/Game.tscn"
-config/icon="res://icon.png"
+config/icon="res://T-pose.png"
+config/windows_native_icon="res://Oscar T-pose.ico"
 
 [autoload]
 
