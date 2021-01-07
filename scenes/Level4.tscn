@@ -489,8 +489,8 @@ scale = Vector2( 4, 4 )
 target = NodePath("../Monster")
 
 [node name="Snake17" parent="." instance=ExtResource( 16 )]
-position = Vector2( 12220.3, 2596.33 )
-scale = Vector2( 6, 6 )
+position = Vector2( 12239.5, 2554.73 )
+scale = Vector2( 8, 8 )
 target = NodePath("../Monster")
 
 [node name="Snake18" parent="." instance=ExtResource( 16 )]
