@@ -610,6 +610,21 @@ scale = Vector2( 2.8, 2.8 )
 texture = ExtResource( 20 )
 flip_h = true
 
+[node name="pantalla_i" type="Sprite" parent="."]
+position = Vector2( 29117.3, 818.376 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 26 )
+
+[node name="pantalla_i2" type="Sprite" parent="."]
+position = Vector2( 4553.07, 258.362 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 26 )
+
+[node name="pantalla_i3" type="Sprite" parent="."]
+position = Vector2( 22071.3, 862.569 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 26 )
+
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Alien" parent="Enemies" instance=ExtResource( 22 )]
@@ -651,21 +666,6 @@ scale = Vector2( 0.85, 1 )
 [node name="deathpit3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 25796, 2062.3 )
 scale = Vector2( 0.65, 1 )
-
-[node name="pantalla_i" type="Sprite" parent="."]
-position = Vector2( 29117.3, 818.376 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 26 )
-
-[node name="pantalla_i2" type="Sprite" parent="."]
-position = Vector2( 4553.07, 258.362 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 26 )
-
-[node name="pantalla_i3" type="Sprite" parent="."]
-position = Vector2( 22071.3, 862.569 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 26 )
 
 [editable path="ChangeLevel"]
 
